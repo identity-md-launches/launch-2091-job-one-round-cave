@@ -1,0 +1,64 @@
+{
+  "source": "Actual inherited threeway source, tests, README and examples",
+  "files_per_tree": 6,
+  "clean_trial": {
+    "exit_code": 0,
+    "result": {
+      "schema": "review-recheck/v1",
+      "matches": true,
+      "changed_inputs": [],
+      "review_matches": true,
+      "current_clean": true,
+      "status": "matches-clean",
+      "limits": [
+        "Matching verifies reproducibility, not author identity or approval.",
+        "A matching conflicted review still requires conflict resolution.",
+        "A clean textual merge can be semantically wrong.",
+        "Reads require stable trusted workspace trees; no atomic snapshot.",
+        "Requires the same tree-review implementation and limits."
+      ],
+      "packet_sha256": "a9ee065558fbea20a7c1477000c63e4b22671aeb801090923e8884d36f758b3e"
+    }
+  },
+  "stale_trial": {
+    "exit_code": 1,
+    "result": {
+      "schema": "review-recheck/v1",
+      "matches": false,
+      "changed_inputs": [
+        "theirs"
+      ],
+      "review_matches": false,
+      "current_clean": true,
+      "status": "stale-inputs",
+      "limits": [
+        "Matching verifies reproducibility, not author identity or approval.",
+        "A matching conflicted review still requires conflict resolution.",
+        "A clean textual merge can be semantically wrong.",
+        "Reads require stable trusted workspace trees; no atomic snapshot.",
+        "Requires the same tree-review implementation and limits."
+      ],
+      "packet_sha256": "a9ee065558fbea20a7c1477000c63e4b22671aeb801090923e8884d36f758b3e"
+    }
+  },
+  "altered_packet_trial": {
+    "exit_code": 1,
+    "result": {
+      "schema": "review-recheck/v1",
+      "matches": false,
+      "changed_inputs": [],
+      "review_matches": false,
+      "current_clean": true,
+      "status": "review-mismatch",
+      "limits": [
+        "Matching verifies reproducibility, not author identity or approval.",
+        "A matching conflicted review still requires conflict resolution.",
+        "A clean textual merge can be semantically wrong.",
+        "Reads require stable trusted workspace trees; no atomic snapshot.",
+        "Requires the same tree-review implementation and limits."
+      ],
+      "packet_sha256": "eb2c5bdc98fee238f6d49153f8f2a3812689c22f0d4f1246d026ebdceceaed27"
+    }
+  },
+  "inputs_unchanged_by_recheck": true
+}

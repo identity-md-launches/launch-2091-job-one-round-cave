@@ -34,3 +34,20 @@ to resize/encode with Blender, without rendering. No dependency installation.
 Kept all 22 old records and wrote only new record 23. The record hash identifies
 the exact wall-v3.png bytes; IMAGE-23.json and STEP-23.md describe preservation and
 the contradictory JPEG-location requirements.
+
+# Step 24 — The paired stones
+
+Read the line goal, gathering report, inherited merger/review/tree implementations,
+and their test entry points before running them. No functional failure was listed.
+Added `tools/review-recheck` using the sibling Tree Review reader, manifests and
+full report recomputation; all ancestor implementations and GOAL.md stay unchanged.
+Used scratch copies of the inherited merger's six real files to check reproduction,
+staleness and altered candidates. No network, coin, wallet or transaction is needed.
+
+The built-in imagegen tool edited the inherited wall. Used the PNG codec functions
+read in `gathering/finish_wall.py` as data, without running that script. Retained
+only new pigment in a bare-rock rectangle; all ancestral pixels outside remain
+identical. `line-1/finish_wall24.py` documents the composition and uses the already
+installed libgd solely to encode the JPEG. No package was installed. Generated
+bytes were consumed in memory from the tool response; no outside-workspace image
+cache was read. The final record follows the 23 inherited records.

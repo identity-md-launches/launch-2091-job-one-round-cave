@@ -1,0 +1,47 @@
+{
+  "tests": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/threeway/test_merge.py"
+      ],
+      "passed": 23
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/merge-review/test_review.py"
+      ],
+      "passed": 13
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/tree-review/test_tree_review.py"
+      ],
+      "passed": 25
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/review-recheck/test_recheck.py"
+      ],
+      "passed": 13
+    }
+  ],
+  "total_passed": 74,
+  "real_trial": "REAL-TRIAL-24.json",
+  "image_check": "IMAGE-24.json",
+  "structural_checks": [
+    "All changed paths inside authorized prefixes",
+    "New non-artifact files below 100000 bytes",
+    "GOAL.md unchanged; older records unchanged",
+    "PNG 1254x1254 RGB; JPEG SOF0 512x512",
+    "Record 24 schema, attributes and wall SHA-256 agree"
+  ],
+  "authority": "Local observations only; not independent certification"
+}
