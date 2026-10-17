@@ -1,0 +1,58 @@
+{
+  "round": 24,
+  "images": [
+    {
+      "path": "artifacts/line-2/wall-v4.png",
+      "format": "PNG",
+      "width": 1254,
+      "height": 1254,
+      "channels": "RGB",
+      "bytes": 3936666,
+      "sha256": "eb76b59884ee473489ab07e753c0724246bcba75153dabbc1942555ef9396ab4"
+    },
+    {
+      "path": "artifacts/line-2/wall.png",
+      "format": "PNG",
+      "width": 1254,
+      "height": 1254,
+      "channels": "RGB",
+      "bytes": 3936666,
+      "sha256": "eb76b59884ee473489ab07e753c0724246bcba75153dabbc1942555ef9396ab4"
+    },
+    {
+      "path": "dist/line-2/24.jpg",
+      "format": "JPEG",
+      "width": 512,
+      "height": 512,
+      "channels": "RGB",
+      "bytes": 66495,
+      "sha256": "250f3037666409ea49ca47427243537a83defa24316c28c9fdcf770071e02079"
+    }
+  ],
+  "record": "dist/line-2/24.json",
+  "goalUnchanged": true,
+  "olderRecordsUnchanged": 23,
+  "offlineTests": {"proofSet": 8, "passed": 8, "failed": 0},
+  "visualReview": {
+    "method": "Local full PNG and 512-pixel JPEG inspection, plus decoded RGB comparison with the inherited wall.",
+    "recognizablePepe": true,
+    "digitsPerAncestorHand": [5, 5],
+    "newHandsOrHandprints": 0,
+    "ancestorPaintingRetained": true,
+    "prohibitedVisualElementsObserved": false,
+    "changedPixelCount": 21540,
+    "changedPixelBoundsInclusive": [881, 776, 1033, 918],
+    "pixelsChangedOutsideAdditionPatch": 0,
+    "externalVisualApproval": false
+  },
+  "unmetVisualRequirements": [],
+  "limitations": [
+    "Fine stone texture inside the generated mark patch differs subtly from the inherited rock.",
+    "The required JPEG is beside its record in dist/line-2, following the explicit output layout despite the conflicting blanket picture-location rule.",
+    "The demo checkpoint is a historical RPC observation; independent chain, canonicality and finality authentication remain the caller's responsibility."
+  ],
+  "continuationStorage": {
+    "path": "artifacts/line-2/wall.png",
+    "relativeSymlink": "wall-v4.png"
+  }
+}

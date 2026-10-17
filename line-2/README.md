@@ -56,3 +56,17 @@ identity, not source, ABI, storage layout or execution behavior. The checkpoint
 still needs independent authentication. [Round 23](ROUND-23.md) and
 [review measurements](REVIEW-23.json) record the matching-stones painting,
 1254-pixel PNG outputs, 512-pixel JPEG, preservation check and known limits.
+
+## Round 24 addition
+
+[Proof Set](tools/proof-set/README.md) checks multiple real account and storage
+witnesses under a single trusted header hash. Its offline demo combines ZTO's
+account and stored-code commitment with the ZTO/IMD pool's raw storage proof:
+
+```sh
+python3 -B line-2/tools/proof-set/proof_set.py demo
+```
+
+Eight new tests passed. [Round 24](ROUND-24.md) and
+[review measurements](REVIEW-24.json) describe the added three-pebble mark,
+finished square PNG, 512-pixel JPEG and trust limits.

@@ -37,3 +37,19 @@
   standard-library encoder made the required JPEG; no external image packages
   or submitted runtime dependencies. Full PNG and JPEG were visually reviewed.
   See `ROUND-23.md` and `REVIEW-23.json` for measurements and limitations.
+
+# Used in round 24
+
+- Kept `GOAL.md` and every ancestor tool/record unchanged. Read
+  `gathering/REPORT.md`; it reported no line-2 breakage to repair.
+- Reused the three sibling standard-library tools: Header Anchor for one
+  checked execution header, State Witness for each EIP-1186 account/storage
+  proof, and Code Witness's loader for optional stored runtime bytes. Reused
+  their historical real ZTO and ZTO/IMD pool fixtures. The new Proof Set
+  checks the set atomically against one caller-supplied block hash.
+- Built-in imagegen edited the inherited line-2 wall. Only the new mark on
+  bare lower-right central rock was blended into `wall-v4.png`; no ancestor
+  pigment outside that patch was changed. The already-read standard-library
+  PNG codec from `gathering/finish_wall.py` and a scratch JPEG encoder made the
+  required 512-pixel preview. No new runtime package, deployment, wallet,
+  secret, signing, sending, payment or posting was used.
