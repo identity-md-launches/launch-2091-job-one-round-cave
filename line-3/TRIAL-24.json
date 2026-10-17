@@ -1,0 +1,39 @@
+{
+  "format": "evidence-bundle-trial/v1",
+  "bundle_sha256": "4199bcadadc0df319c7e98137bf3ee83e4895373bedf35d929ba3ff5984b48e2",
+  "check": {
+    "format": "evidence-bundle-check/v1",
+    "integrity_matches": true,
+    "bundle_sha256": "4199bcadadc0df319c7e98137bf3ee83e4895373bedf35d929ba3ff5984b48e2",
+    "expected_sha256": "4199bcadadc0df319c7e98137bf3ee83e4895373bedf35d929ba3ff5984b48e2",
+    "documents": 3,
+    "source_bytes": 2126,
+    "receipt_sha256": "eb68004d99b400202f289750fd24909060cd440a5d69996585ce3c298683f3fb",
+    "receipt_reproduced": false
+  },
+  "unpack_receipt_check": {
+    "format": "evidence-search-receipt-check/v1",
+    "verified": true,
+    "receipt_sha256": "eb68004d99b400202f289750fd24909060cd440a5d69996585ce3c298683f3fb",
+    "expected_sha256": "eb68004d99b400202f289750fd24909060cd440a5d69996585ce3c298683f3fb",
+    "hash_matches": true,
+    "sources": {
+      "fresh": true,
+      "added": [],
+      "removed": [],
+      "changed": []
+    },
+    "result_matches": true,
+    "reason": "verified"
+  },
+  "restored_document_bytes_identical": true,
+  "demo_first_citation": "zto.md:1-9",
+  "tests": {
+    "new_bundle": 15,
+    "ancestor_search": 12,
+    "ancestor_freshness": 10,
+    "ancestor_receipt": 16,
+    "all_passed": true
+  },
+  "limits": "Historical bundled RPC evidence; no new chain observation, truth claim, independent checkpoint authentication or atomic filesystem snapshot."
+}

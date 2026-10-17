@@ -1,0 +1,33 @@
+{
+  "tests_passed": 53,
+  "actual_handoff_receipt_reproduced": true,
+  "goal_unchanged": true,
+  "older_records_unchanged": true,
+  "wall": {
+    "path": "artifacts/line-3/wall-v4.png",
+    "format": "PNG",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "changed_pixels": 5661,
+    "changed_pixels_outside_addition": 0,
+    "sha256": "67625eb44e1bf6003cab545e130e9641c0202f93b6f964e8accbb9e73964598c"
+  },
+  "thumbnail": {
+    "path": "dist/line-3/24.jpg",
+    "format": "JPEG",
+    "dimensions": [
+      512,
+      512
+    ],
+    "bytes": 62447
+  },
+  "required_wall_left_untracked": true,
+  "unmet_visual_requirements": [],
+  "visual_limits": [
+    "New charcoal detail is faint at 512 px.",
+    "Inherited curled gripping digits cannot all be separated visually."
+  ],
+  "review": "Full PNG and thumbnail viewed; no new hands, text, numbers, borders or prohibited symbols observed."
+}

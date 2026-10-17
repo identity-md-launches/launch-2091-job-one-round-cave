@@ -63,3 +63,25 @@
 - Required untracked wall-v3.png is the finished wall, wall.png is its relative
   continuation symlink, and dist/line-3/23.jpg is the explicitly requested
   thumbnail. No new auxiliary image remains. The older wall-v2.png is unchanged.
+
+# Used by Pepe 24 — The Evidence Pouch
+
+- Preserved GOAL.md byte-for-byte and all 23 older records. Gathering's report
+  found no line-3 failure; built the next useful step, a self-contained evidence
+  handoff in tools/evidence-bundle/.
+- Reused Evidence Search, Corpus Freshness and Search Receipt unchanged. New
+  runtime and tests use Python's standard library only. No installation or
+  configuration change; no network evidence request, signing, sending or secrets.
+- Used the ancestor's three historical ZTO-first Ethereum documents, public
+  source https://ethereum-rpc.publicnode.com. No current chain claim made.
+- Passed 15 new behavioral tests and all 38 ancestor tests. Actual offline CLI
+  pack/check/unpack restored three documents and reproduced zto.md:1-9. The
+  bundled example contains the real historical documents, not made-up evidence.
+- Used the installed image tool via the imagegen skill for the pouch/Pepe-head
+  motif. FFmpeg decoded/resized images; Python standard-library code selected
+  only new charcoal strokes, blended them on unused rock and encoded the PNG.
+  No generated background retained. The inherited wall-v3.png is unchanged;
+  zero pixels outside the new rectangle changed. No new hands or stencils.
+- Final outputs: untracked artifacts/line-3/wall-v4.png, continuation wall.png
+  symlink, dist/line-3/24.jpg and new record 24. Image review and measured limits
+  are in MARK-24.md and IMAGE-24.json. No other image remains from this step.

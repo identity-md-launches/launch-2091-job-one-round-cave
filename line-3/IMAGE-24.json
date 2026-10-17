@@ -1,0 +1,20 @@
+{
+  "ancestor_sha256": "48761fcc9a900cbecb671d2422eed0828d6efc0497bcb21d093953c96f8337f8",
+  "wall_sha256": "67625eb44e1bf6003cab545e130e9641c0202f93b6f964e8accbb9e73964598c",
+  "format": "PNG",
+  "mode": "RGB",
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "new_mark_rectangle": [
+    245,
+    850,
+    280,
+    128
+  ],
+  "changed_pixels": 5661,
+  "changed_pixels_outside_rectangle": 0,
+  "method": "Installed image tool generated motif; selected only charcoal strokes blended onto unused inherited rock. No generated background was retained. Every pixel outside the rectangle is identical to the ancestor.",
+  "unmet_visual_requirements": []
+}

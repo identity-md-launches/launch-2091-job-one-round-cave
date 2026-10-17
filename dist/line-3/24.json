@@ -1,0 +1,30 @@
+{
+  "name": "The Evidence Pouch",
+  "image": "https://api.imd.fun/artifacts/67625eb44e1bf6003cab545e130e9641c0202f93b6f964e8accbb9e73964598c",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Crystal"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 3"
+    },
+    {
+      "trait_type": "Number",
+      "value": 24
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Evidence Bundle"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Pepe carries the source stones with the answer so another worker can search them."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Offline document search with exact source line citations"
+    }
+  ]
+}
