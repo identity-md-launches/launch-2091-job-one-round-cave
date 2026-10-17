@@ -1,0 +1,162 @@
+{
+  "suites": [
+    {
+      "tool": "proof-search",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "shared/proof-search",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit": 0,
+      "tests": 14,
+      "log": "test_added_removed_and_no_match (test_anchored_search.AnchoredSearch.test_added_removed_and_no_match) ... ok\ntest_cli_demo_read_only_and_errors (test_anchored_search.AnchoredSearch.test_cli_demo_read_only_and_errors) ... ok\ntest_existing_output_and_symlinks_rejected (test_anchored_search.AnchoredSearch.test_existing_output_and_symlinks_rejected) ... ok\ntest_forged_receipt_and_matching_index_rejected (test_anchored_search.AnchoredSearch.test_forged_receipt_and_matching_index_rejected) ... ok\ntest_metadata_never_enters_receipts_or_saved_witness (test_anchored_search.AnchoredSearch.test_metadata_never_enters_receipts_or_saved_witness) ... ok\ntest_real_proof_citations_and_input_immutability (test_anchored_search.AnchoredSearch.test_real_proof_citations_and_input_immutability) ... ok\ntest_saved_proof_reverified_and_query_anchor_required (test_anchored_search.AnchoredSearch.test_saved_proof_reverified_and_query_anchor_required) ... ok\ntest_tampered_proof_writes_nothing (test_anchored_search.AnchoredSearch.test_tampered_proof_writes_nothing) ... ok\ntest_uncited_change_blocks_search (test_anchored_search.AnchoredSearch.test_uncited_change_blocks_search) ... ok\ntest_wrong_checkpoint_address_and_slots_write_nothing (test_anchored_search.AnchoredSearch.test_wrong_checkpoint_address_and_slots_write_nothing) ... ok\ntest_bad_proof_writes_nothing (test_proof_search.Integration.test_bad_proof_writes_nothing) ... ok\ntest_real_receipt_search_and_stale_detection (test_proof_search.Integration.test_real_receipt_search_and_stale_detection) ... ok\ntest_unverified_metadata_excluded (test_proof_search.Integration.test_unverified_metadata_excluded) ... ok\ntest_wrong_slot_and_root_rejected (test_proof_search.Integration.test_wrong_slot_and_root_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 0.534s\n\nOK\n"
+    },
+    {
+      "tool": "merge-dependencies",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "shared/merge-dependencies",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit": 0,
+      "tests": 10,
+      "log": "test_cli_preserves_inputs_and_statuses (test_check_merge.IntegrationTests.test_cli_preserves_inputs_and_statuses) ... ok\ntest_compatible_change_retained_exactly (test_check_merge.IntegrationTests.test_compatible_change_retained_exactly) ... ok\ntest_determinism_and_side_symmetry (test_check_merge.IntegrationTests.test_determinism_and_side_symmetry) ... ok\ntest_incomplete_minimization_is_reported (test_check_merge.IntegrationTests.test_incomplete_minimization_is_reported) ... ok\ntest_invalid_clean_text_is_not_compatibility (test_check_merge.IntegrationTests.test_invalid_clean_text_is_not_compatibility) ... ok\ntest_low_budget_never_claims_impossibility (test_check_merge.IntegrationTests.test_low_budget_never_claims_impossibility) ... ok\ntest_real_clean_text_merge_is_incompatible (test_check_merge.IntegrationTests.test_real_clean_text_merge_is_incompatible) ... ok\ntest_rejected_audit_does_not_claim_completion (test_check_merge.IntegrationTests.test_rejected_audit_does_not_claim_completion) ... ok\ntest_strict_budget_and_text_bounds (test_check_merge.IntegrationTests.test_strict_budget_and_text_bounds) ... ok\ntest_text_conflict_never_enters_solver (test_check_merge.IntegrationTests.test_text_conflict_never_enters_solver) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.323s\n\nOK\n"
+    },
+    {
+      "tool": "proof-handoff",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "shared/proof-handoff",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit": 0,
+      "tests": 11,
+      "log": "test_bundle_immutability_exclusive_output_and_cleanup (test_handoff.HandoffTests.test_bundle_immutability_exclusive_output_and_cleanup) ... ok\ntest_cli_failure_has_no_partial_success (test_handoff.HandoffTests.test_cli_failure_has_no_partial_success) ... ok\ntest_forged_excerpt_rehashed_still_fails_reproduction (test_handoff.HandoffTests.test_forged_excerpt_rehashed_still_fails_reproduction) ... ok\ntest_manifest_pin_mismatch (test_handoff.HandoffTests.test_manifest_pin_mismatch) ... ok\ntest_missing_account_document_rejected (test_handoff.HandoffTests.test_missing_account_document_rejected) ... ok\ntest_no_hit_receipt_valid (test_handoff.HandoffTests.test_no_hit_receipt_valid) ... ok\ntest_real_accounts_receipt_and_new_query (test_handoff.HandoffTests.test_real_accounts_receipt_and_new_query) ... ok\ntest_rehashed_changed_document_cannot_become_proof (test_handoff.HandoffTests.test_rehashed_changed_document_cannot_become_proof) ... ok\ntest_relocation_without_line_folders (test_handoff.HandoffTests.test_relocation_without_line_folders) ... ok\ntest_wrong_bundle_pin_rejected_before_scratch_writes (test_handoff.HandoffTests.test_wrong_bundle_pin_rejected_before_scratch_writes) ... ok\ntest_wrong_checkpoint_rejected (test_handoff.HandoffTests.test_wrong_checkpoint_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 11 tests in 1.027s\n\nOK\n"
+    }
+  ],
+  "total_tests": 35,
+  "copied_files_match_sources": 31,
+  "example": {
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "shared/proof-handoff/handoff.py",
+      "check",
+      "shared/proof-handoff/tools/proof-set/examples/zto-and-pool.json",
+      "--block-hash",
+      "0x38dc4deb12174972d332cc1f95008b25ea87434f420ce0a51938e1b28755e9dc",
+      "--manifest-sha256",
+      "a4e9d3fb56c90bf1202ac3d53b8ce7c557febe06d88581a9430a2f6a59f14e8f",
+      "--bundle",
+      "shared/proof-handoff/examples/zto-proof-bundle.json",
+      "--expected-sha256",
+      "57ba25ab26d159efaa1c07dc28c1dc0a0e0914049df9646b46374fd04621089f"
+    ],
+    "exit": 0,
+    "result": {
+      "format": "proof-handoff-checked/v1",
+      "verified": true,
+      "proofs_verified": true,
+      "corpus_matches_proofs": true,
+      "receipt_reproduced": true,
+      "bundle_sha256": "57ba25ab26d159efaa1c07dc28c1dc0a0e0914049df9646b46374fd04621089f",
+      "manifest_sha256": "a4e9d3fb56c90bf1202ac3d53b8ce7c557febe06d88581a9430a2f6a59f14e8f",
+      "anchor": {
+        "blockHash": "0x38dc4deb12174972d332cc1f95008b25ea87434f420ce0a51938e1b28755e9dc",
+        "stateRoot": "0x70c13580735123b57c0a9a24692875f4ef366b04c69d92af9f539561e626d512",
+        "blockNumber": "0x18ff826",
+        "timestamp": "0x6ad36f57",
+        "headerSchema": "prague"
+      },
+      "accounts": 2,
+      "search": {
+        "format": "evidence-search-results/v1",
+        "hits": [
+          {
+            "citation": "000000000004444c5dc75cb358380d2e3de08a90.md:17-26",
+            "line_end": 26,
+            "line_start": 17,
+            "matched_terms": [
+              "storage",
+              "value"
+            ],
+            "path": "000000000004444c5dc75cb358380d2e3de08a90.md",
+            "score": 2.74965503,
+            "sha256": "f5f2e0f247f6f13719086bde4fc536821fc859406f939e1eafceb97b83dc8358",
+            "source_verified": true,
+            "text": "      \"storage\": [\n        {\n          \"exists\": true,\n          \"slot\": \"0x85763e16f60121d4266264cb693cca4d6bdb9e98ff9cc3d698d892d90342971b\",\n          \"value\": \"0x30d400000001b32f000000000000010675ff9d949ea2d3c11613bc41\"\n        }\n      ],\n      \"storageRoot\": \"0x6071a51b5b6739ea7b7d63b4ee086311b3a11b2f41a02f13f30158e99c1377c0\",\n      \"verified\": true\n    }"
+          },
+          {
+            "citation": "d782bdea4ef02a0bd391eb9089470c8080f0a68e.md:25-34",
+            "line_end": 34,
+            "line_start": 25,
+            "matched_terms": [
+              "value"
+            ],
+            "path": "d782bdea4ef02a0bd391eb9089470c8080f0a68e.md",
+            "score": 2.3540622,
+            "sha256": "1038dacf5518b723f65fd89fbc34068dfdf764be00333893c183f0a8d9aa1f15",
+            "source_verified": true,
+            "text": "          \"exists\": false,\n          \"slot\": \"0x0\",\n          \"value\": \"0x0\"\n        },\n        {\n          \"exists\": false,\n          \"slot\": \"0x1\",\n          \"value\": \"0x0\"\n        }\n      ],"
+          },
+          {
+            "citation": "000000000004444c5dc75cb358380d2e3de08a90.md:1-10",
+            "line_end": 10,
+            "line_start": 1,
+            "matched_terms": [
+              "storage"
+            ],
+            "path": "000000000004444c5dc75cb358380d2e3de08a90.md",
+            "score": 0.48875126,
+            "sha256": "f5f2e0f247f6f13719086bde4fc536821fc859406f939e1eafceb97b83dc8358",
+            "source_verified": true,
+            "text": "# Ethereum account proof result\nAddress: 0x000000000004444c5dc75cb358380d2e3de08a90\nBlock number (decimal): 26212390\nCheckpoint, canonicality and finality require independent authentication.\nRaw storage slots are not interpreted as price, decimals or token balance.\nStored code identity does not establish source or execution behavior.\n```json\n{\n  \"account\": {\n    \"state\": {"
+          },
+          {
+            "citation": "d782bdea4ef02a0bd391eb9089470c8080f0a68e.md:1-10",
+            "line_end": 10,
+            "line_start": 1,
+            "matched_terms": [
+              "storage"
+            ],
+            "path": "d782bdea4ef02a0bd391eb9089470c8080f0a68e.md",
+            "score": 0.48875126,
+            "sha256": "1038dacf5518b723f65fd89fbc34068dfdf764be00333893c183f0a8d9aa1f15",
+            "source_verified": true,
+            "text": "# Ethereum account proof result\nAddress: 0xd782bdea4ef02a0bd391eb9089470c8080f0a68e\nBlock number (decimal): 26212390\nCheckpoint, canonicality and finality require independent authentication.\nRaw storage slots are not interpreted as price, decimals or token balance.\nStored code identity does not establish source or execution behavior.\n```json\n{\n  \"account\": {\n    \"code\": {"
+          }
+        ],
+        "indexed_documents": 2,
+        "indexed_passages": 11,
+        "query": "storage value",
+        "require_all": false,
+        "terms": [
+          "storage",
+          "value"
+        ]
+      },
+      "trust": "Every listed account and slot is proven against one header matching the supplied hash. The caller must authenticate that hash, chain, canonicality and finality independently. Code checks establish stored byte identity only, not source, ABI, layout, proxy targets or behavior."
+    }
+  }
+}

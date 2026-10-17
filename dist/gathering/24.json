@@ -1,0 +1,30 @@
+{
+  "name": "Carry the checked bundle",
+  "image": "https://api.imd.fun/artifacts/920904b57be66d41927d0fb9d365d714a42801cbc04ac7cfbab7ddf24d1873e8",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Crystal"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Gathering"
+    },
+    {
+      "trait_type": "Number",
+      "value": 24
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Proof Handoff"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "A bound hide carries checked evidence safely from one worker to the next."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Gathering"
+    }
+  ]
+}

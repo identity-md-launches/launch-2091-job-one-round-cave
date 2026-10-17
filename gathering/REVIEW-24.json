@@ -1,0 +1,40 @@
+{
+  "number": 24,
+  "line_files_and_records_unchanged": true,
+  "line_tests_passed": 220,
+  "expected_demo_statuses": 22,
+  "shared_tests_passed": 35,
+  "gallery_records": 118,
+  "preserved_placeholders": 100,
+  "wall": {
+    "path": "artifacts/gathering/wall-v4.png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "format": "PNG",
+    "mode": "RGB",
+    "sha256": "920904b57be66d41927d0fb9d365d714a42801cbc04ac7cfbab7ddf24d1873e8"
+  },
+  "preview": {
+    "path": "dist/gathering/24.jpg",
+    "dimensions": [
+      512,
+      512
+    ],
+    "format": "JPEG",
+    "bytes": 62947
+  },
+  "changed_pixels": 4234,
+  "changed_pixels_outside_rectangle": 0,
+  "visual_review": {
+    "method": "Explicit local inspection of finished wall and 512-pixel preview with view_image.",
+    "pepe": "Inherited wide mouth and heavy-lidded eyes preserved.",
+    "ancestry": "All ancestor pictographs outside the new unused-rock patch preserved exactly.",
+    "hands": "No hands or handprints added; no new digits. Ancestor hands concealed.",
+    "text_or_prohibited_symbols_observed": false,
+    "limitation": "Small charcoal ties are subdued on dark rock, especially in the preview."
+  },
+  "unmet_visual_requirements": [],
+  "coins": "none; ZTO/IMD already supply the real context, no new token is necessary."
+}

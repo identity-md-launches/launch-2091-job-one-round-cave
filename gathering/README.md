@@ -1,43 +1,42 @@
-# Gathering 23: Branches must fit
+# Gathering 24: Carry the checked bundle
 
-The gathering connects merge review with dependency checking, rechecks all four
-lines, and leaves a bound-twig painting on the inherited wall.
-
-```sh
-python3 -B shared/merge-dependencies/check_merge.py demo
-```
-
-Base and both branches resolve independently; their clean text merge creates
-incompatible Requests/idna requirements. The new tool reports and audits a reduced
-root core. Its README gives input formats, checks and limitations.
-
-REPORT.md covers every line: 184 passing line tests and 16 expected demo/status
-results, plus 14 passing existing shared tests and 10 passing new integration tests.
-No line files changed. COINS.md says none; ZTO/IMD already supply real chain context.
-
-Required output artifacts/gathering/wall-v3.png is a 1254 × 1254 RGB PNG.
-Continuation wall.png is a relative symlink to the separately uploaded export,
-avoiding a duplicate source PNG. A source-only checkout needs the artifact restored
-beside that link. Preserve symlinks when archiving. dist/gathering/23.jpg is a
-512 × 512 JPEG; record 23 names the final PNG's SHA-256. Only those two new images
-are saved. The required export remains untracked for upload.
-
-The image tool drew worn charcoal twigs and an ochre binding on unused stone.
-Pigment was isolated to preserve every ancestor: 3,667 changed pixels in one
-165 × 125 patch, zero outside it. The original wide-mouthed, heavy-lidded Pepe
-remains. No hands/stencils added; ancestor hands are concealed. Both final sizes
-were inspected. Twigs are faint against dark rock. No unmet visual requirement
-identified in local review; this is not external certification.
+This round rechecks the four lines and adds [Proof Handoff](../shared/proof-handoff/README.md),
+which joins multi-account Ethereum proofs with a portable, reproduced search bundle.
 
 ```sh
-python3 -B gathering/build_gallery.py
+python3 -B shared/proof-handoff/handoff.py demo
 ```
 
-This rebuilds the self-contained gallery and goal feed, retaining earlier records
-and all 100 unpainted slots. Artifact URLs have local JPEG fallbacks for painted
-records. There are no external scripts, styles, fonts or wallet controls.
+The real historical ZTO account/code and ZTO/IMD pool prove against one execution
+header. Searchable documents must match those reverified results exactly; the
+saved query then reproduces on temporarily restored sources. The tool works
+without line folders and needs no network or installed dependency.
 
-The finish helpers document local production, not runtime dependencies.
-finish_wall23.py requires the transient image-tool draft and ancestor wall-v2
-artifact and is not an idempotent rebuild command. ffmpeg encoded the JPEG using
-scale=512:512 and quality 5. Image measurements are in image-preservation-23.json.
+REPORT.md covers all four goals, commands, results and limits. All 220 line tests,
+22 expected demo/status trials and 35 shared tests passed. COINS.md says none.
+No line file or line record changed. Reproduce with:
+
+```sh
+python3 -B gathering/check_tools.py
+python3 -B gathering/check_shared.py
+python3 -B gathering/check_deliverable.py
+```
+
+The required `artifacts/gathering/wall-v4.png` is a 1254 × 1254 RGB PNG. The
+installed image tool generated an ochre hide/reed bundle with charcoal ties;
+only its pigment was blended on unused ancestor rock. Exactly 4,234 pixels
+changed in one 190 × 85 patch; zero outside it. Pepe and all inherited marks
+remain. No hands/stencils or text added. Charcoal ties are faint at preview size;
+no unmet visual requirement was identified in local inspection of both images.
+
+`dist/gathering/24.jpg` is a 512 × 512 JPEG. Record 24 hashes the finished PNG.
+The export stays untracked for the uploader; `wall.png` is a relative continuation
+symlink, so a source-only archive needs the uploaded PNG restored beside it.
+The image prompt is in IMAGE_PROMPT-24.md. finish_wall24.py documents a one-time
+production step requiring the transient generated draft; do not rerun it on the
+finished wall. It is not a runtime dependency. PNG encoding used the existing
+standard-library helper; ffmpeg produced the JPEG (scale=512:512, quality 5).
+
+`python3 -B gathering/build_gallery.py` rebuilds the self-contained gallery and
+goal feed. It retains every record and all 100 inherited placeholders. No external
+scripts, fonts, wallet controls or styles are needed.

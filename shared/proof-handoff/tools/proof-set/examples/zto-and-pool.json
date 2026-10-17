@@ -1,0 +1,17 @@
+{
+  "format": "proof-set/1",
+  "header": "../../header-anchor/examples/zto-header-mainnet.json",
+  "accounts": [
+    {
+      "address": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+      "slots": ["0x0", "0x1"],
+      "witness": "../../state-witness/examples/zto-mainnet.json",
+      "code": "../../code-witness/examples/zto-runtime.hex"
+    },
+    {
+      "address": "0x000000000004444c5dc75cb358380d2e3de08a90",
+      "slots": ["0x85763e16f60121d4266264cb693cca4d6bdb9e98ff9cc3d698d892d90342971b"],
+      "witness": "../../state-witness/examples/zto-pool-mainnet.json"
+    }
+  ]
+}

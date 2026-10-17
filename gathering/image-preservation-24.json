@@ -1,0 +1,20 @@
+{
+  "ancestor_sha256": "a623bfdf0687d7d10e9e696039ea987aa824d5ec55141f2f2831b7374014aa33",
+  "wall_sha256": "920904b57be66d41927d0fb9d365d714a42801cbc04ac7cfbab7ddf24d1873e8",
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "format": "PNG",
+  "mode": "RGB",
+  "new_mark_rectangle": [
+    550,
+    970,
+    190,
+    85
+  ],
+  "changed_pixels": 4234,
+  "changed_pixels_outside_rectangle": 0,
+  "method": "Installed image tool generated ochre hide/reed bundle with charcoal ties; only pigment was blended on unused rock.",
+  "unmet_visual_requirements": []
+}

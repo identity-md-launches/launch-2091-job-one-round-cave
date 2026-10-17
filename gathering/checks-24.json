@@ -1,0 +1,1456 @@
+{
+  "suites": [
+    {
+      "tool": "line-1/tools/threeway",
+      "command": "python3 -B -m unittest discover -s line-1/tools/threeway -p test_*.py",
+      "exit": 0,
+      "tests": 23,
+      "summary": ".......................\n----------------------------------------------------------------------\nRan 23 tests in 0.073s\n\nOK\n"
+    },
+    {
+      "tool": "line-1/tools/merge-review",
+      "command": "python3 -B -m unittest discover -s line-1/tools/merge-review -p test_*.py",
+      "exit": 0,
+      "tests": 13,
+      "summary": ".............\n----------------------------------------------------------------------\nRan 13 tests in 0.331s\n\nOK\n"
+    },
+    {
+      "tool": "line-1/tools/tree-review",
+      "command": "python3 -B -m unittest discover -s line-1/tools/tree-review -p test_*.py",
+      "exit": 0,
+      "tests": 25,
+      "summary": ".........................\n----------------------------------------------------------------------\nRan 25 tests in 0.468s\n\nOK\n"
+    },
+    {
+      "tool": "line-1/tools/review-recheck",
+      "command": "python3 -B -m unittest discover -s line-1/tools/review-recheck -p test_*.py",
+      "exit": 0,
+      "tests": 13,
+      "summary": ".............\n----------------------------------------------------------------------\nRan 13 tests in 0.937s\n\nOK\n"
+    },
+    {
+      "tool": "line-2/tools/state-witness",
+      "command": "python3 -B -m unittest discover -s line-2/tools/state-witness -p test_*.py",
+      "exit": 0,
+      "tests": 30,
+      "summary": "..............................\n----------------------------------------------------------------------\nRan 30 tests in 0.250s\n\nOK\n"
+    },
+    {
+      "tool": "line-2/tools/header-anchor",
+      "command": "python3 -B -m unittest discover -s line-2/tools/header-anchor -p test_*.py",
+      "exit": 0,
+      "tests": 14,
+      "summary": "..............\n----------------------------------------------------------------------\nRan 14 tests in 0.229s\n\nOK\n"
+    },
+    {
+      "tool": "line-2/tools/code-witness",
+      "command": "python3 -B -m unittest discover -s line-2/tools/code-witness -p test_*.py",
+      "exit": 0,
+      "tests": 9,
+      "summary": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.237s\n\nOK\n"
+    },
+    {
+      "tool": "line-2/tools/proof-set",
+      "command": "python3 -B -m unittest discover -s line-2/tools/proof-set -p test_*.py",
+      "exit": 0,
+      "tests": 8,
+      "summary": "........\n----------------------------------------------------------------------\nRan 8 tests in 0.124s\n\nOK\n"
+    },
+    {
+      "tool": "line-3/tools/evidence-search",
+      "command": "python3 -B -m unittest discover -s line-3/tools/evidence-search -p test_*.py",
+      "exit": 0,
+      "tests": 12,
+      "summary": "............\n----------------------------------------------------------------------\nRan 12 tests in 0.019s\n\nOK\n"
+    },
+    {
+      "tool": "line-3/tools/corpus-freshness",
+      "command": "python3 -B -m unittest discover -s line-3/tools/corpus-freshness -p test_*.py",
+      "exit": 0,
+      "tests": 10,
+      "summary": "..........\n----------------------------------------------------------------------\nRan 10 tests in 0.026s\n\nOK\n"
+    },
+    {
+      "tool": "line-3/tools/search-receipt",
+      "command": "python3 -B -m unittest discover -s line-3/tools/search-receipt -p test_*.py",
+      "exit": 0,
+      "tests": 16,
+      "summary": "................\n----------------------------------------------------------------------\nRan 16 tests in 0.101s\n\nOK\n"
+    },
+    {
+      "tool": "line-3/tools/evidence-bundle",
+      "command": "python3 -B -m unittest discover -s line-3/tools/evidence-bundle -p test_*.py",
+      "exit": 0,
+      "tests": 15,
+      "summary": "...............\n----------------------------------------------------------------------\nRan 15 tests in 0.115s\n\nOK\n"
+    },
+    {
+      "tool": "line-4/tools/offline-resolver",
+      "command": "python3 -B -m unittest discover -s /home/seat/.identitymd/work/a472158c-ff87-48bd-a6ea-c31207e93600/cae634d9-d669-48e0-a3b7-5540d059b4a6/test/scratch/gathering24-ghfif7vp/offline-resolver -p test_*.py",
+      "exit": 0,
+      "tests": 17,
+      "summary": ".................\n----------------------------------------------------------------------\nRan 17 tests in 0.119s\n\nOK\n"
+    },
+    {
+      "tool": "line-4/tools/conflict-core",
+      "command": "python3 -B -m unittest discover -s line-4/tools/conflict-core -p test_*.py",
+      "exit": 0,
+      "tests": 15,
+      "summary": "...............\n----------------------------------------------------------------------\nRan 15 tests in 0.583s\n\nOK\n"
+    }
+  ],
+  "demos": [
+    {
+      "command": "python3 -B line-1/tools/threeway/merge.py --demo --format json",
+      "exit": 0,
+      "expected_exit": 0,
+      "result": {
+        "schema": "threeway/v1",
+        "clean": true,
+        "merged": "Worker handoff\nInput: verified-source.txt\nOutput: result.txt\nReview: required before publishing\n",
+        "conflicts": []
+      }
+    },
+    {
+      "command": "python3 -B line-1/tools/merge-review/review.py --demo clean --format json",
+      "exit": 0,
+      "expected_exit": 0,
+      "result": {
+        "schema": "merge-review/v1",
+        "clean": true,
+        "inputs": {
+          "base": {
+            "sha256": "a5284b2ec693ee588a7204ad68fa4597bfdd39848ce06c11451b38b1de4d25a2",
+            "bytes": 63,
+            "lines": 3
+          },
+          "ours": {
+            "sha256": "148538f0d59632ac9a41b26984ee6de1c3067dea42ba86e69caff6a59f92fac4",
+            "bytes": 73,
+            "lines": 3
+          },
+          "theirs": {
+            "sha256": "e114da6fad12586e42cfe93accd6e913843c381d1d1009df6aa0ade574b5e460",
+            "bytes": 63,
+            "lines": 3
+          }
+        },
+        "merged_sha256": "4225b591c1f237a7bb6c79726732eed5d83108b148c0f94a8d56048c778e237d",
+        "merged": "Title: Deployment checklist\nSource: verified-source.txt\nReview: required\n",
+        "diffs": {
+          "ours": "--- BASE\n+++ OURS\n@@ -1,3 +1,3 @@\n Title: Deployment checklist\n-Source: draft.txt\n+Source: verified-source.txt\n Review: optional\n",
+          "theirs": "--- BASE\n+++ THEIRS\n@@ -1,3 +1,3 @@\n Title: Deployment checklist\n Source: draft.txt\n-Review: optional\n+Review: required\n"
+        },
+        "conflicts": [],
+        "limits": [
+          "Line-based alignment can be ambiguous on repeated text.",
+          "Clean means no textual conflict, not semantic correctness.",
+          "Hashes identify bytes; they do not authenticate an author."
+        ]
+      }
+    },
+    {
+      "command": "python3 -B line-1/tools/merge-review/review.py --demo conflict --format json",
+      "exit": 1,
+      "expected_exit": 1,
+      "result": {
+        "schema": "merge-review/v1",
+        "clean": false,
+        "inputs": {
+          "base": {
+            "sha256": "a5284b2ec693ee588a7204ad68fa4597bfdd39848ce06c11451b38b1de4d25a2",
+            "bytes": 63,
+            "lines": 3
+          },
+          "ours": {
+            "sha256": "148538f0d59632ac9a41b26984ee6de1c3067dea42ba86e69caff6a59f92fac4",
+            "bytes": 73,
+            "lines": 3
+          },
+          "theirs": {
+            "sha256": "20643823dab4978628b10bf5de871132a34aff11543878e2e8eab6dad8dac552",
+            "bytes": 72,
+            "lines": 3
+          }
+        },
+        "merged_sha256": "261aff903a4e2f5ad06c2df0dc9f81d580af6e0c2b08d4b20258b14ed5831d13",
+        "merged": "Title: Deployment checklist\n<<<<<<< OURS\nSource: verified-source.txt\n||||||| BASE\nSource: draft.txt\n=======\nSource: audited-source.txt\n>>>>>>> THEIRS\nReview: optional\n",
+        "diffs": {
+          "ours": "--- BASE\n+++ OURS\n@@ -1,3 +1,3 @@\n Title: Deployment checklist\n-Source: draft.txt\n+Source: verified-source.txt\n Review: optional\n",
+          "theirs": "--- BASE\n+++ THEIRS\n@@ -1,3 +1,3 @@\n Title: Deployment checklist\n-Source: draft.txt\n+Source: audited-source.txt\n Review: optional\n"
+        },
+        "conflicts": [
+          {
+            "number": 1,
+            "base_start": 1,
+            "base_end": 2,
+            "base": "Source: draft.txt\n",
+            "ours": "Source: verified-source.txt\n",
+            "theirs": "Source: audited-source.txt\n",
+            "context_before": "Title: Deployment checklist\n",
+            "context_after": "Review: optional\n",
+            "ours_diff": "--- BASE region\n+++ OURS region\n@@ -1 +1 @@\n-Source: draft.txt\n+Source: verified-source.txt\n",
+            "theirs_diff": "--- BASE region\n+++ THEIRS region\n@@ -1 +1 @@\n-Source: draft.txt\n+Source: audited-source.txt\n"
+          }
+        ],
+        "limits": [
+          "Line-based alignment can be ambiguous on repeated text.",
+          "Clean means no textual conflict, not semantic correctness.",
+          "Hashes identify bytes; they do not authenticate an author."
+        ]
+      }
+    },
+    {
+      "command": "python3 -B line-1/tools/tree-review/tree_review.py --demo clean --format json",
+      "exit": 0,
+      "expected_exit": 0,
+      "result": {
+        "schema": "tree-review/v1",
+        "clean": true,
+        "inputs": {
+          "base": {
+            "sha256": "5e74c88993923978fd0556a14930166a7d1d17d3d2e2a235776f1572632fcaee",
+            "files": 2,
+            "directories": 0,
+            "bytes": 51
+          },
+          "ours": {
+            "sha256": "dbfce3e7999cd71816fa77b7641e5448dd60cb4a50ad298aa0befa0742664c43",
+            "files": 3,
+            "directories": 0,
+            "bytes": 86
+          },
+          "theirs": {
+            "sha256": "1221539821ce5dbafe30dc8cff085f4e8b6b8bb3448b8efb5359117df4b00d7a",
+            "files": 1,
+            "directories": 0,
+            "bytes": 35
+          }
+        },
+        "counts": {
+          "merged": 1,
+          "ours": 1,
+          "deleted": 1
+        },
+        "path_conflicts": [],
+        "files": [
+          {
+            "path": "guide.md",
+            "inputs": {
+              "base": {
+                "kind": "file",
+                "sha256": "29959701dbcd0459539c6c4702125690a5127121cc74db18e60fe88067cd4064",
+                "bytes": 35
+              },
+              "ours": {
+                "kind": "file",
+                "sha256": "81160defd2a84b85cecd57588116f5b5b63e9eeee70f5595f2c4235d255b9dca",
+                "bytes": 45
+              },
+              "theirs": {
+                "kind": "file",
+                "sha256": "560eb1b5eed675c3aa42cae5c80d3a750b4d653ea3867158e35d0b5c8a373501",
+                "bytes": 35
+              }
+            },
+            "status": "merged",
+            "candidate": "Source: verified-source.txt\nReview: required\n",
+            "candidate_sha256": "6cbb84b59bed88a675f20e61ae20900d44bd4a23462c2184a6601b9e112f7b6d",
+            "review": {
+              "schema": "merge-review/v1",
+              "clean": true,
+              "inputs": {
+                "base": {
+                  "sha256": "29959701dbcd0459539c6c4702125690a5127121cc74db18e60fe88067cd4064",
+                  "bytes": 35,
+                  "lines": 2
+                },
+                "ours": {
+                  "sha256": "81160defd2a84b85cecd57588116f5b5b63e9eeee70f5595f2c4235d255b9dca",
+                  "bytes": 45,
+                  "lines": 2
+                },
+                "theirs": {
+                  "sha256": "560eb1b5eed675c3aa42cae5c80d3a750b4d653ea3867158e35d0b5c8a373501",
+                  "bytes": 35,
+                  "lines": 2
+                }
+              },
+              "merged_sha256": "6cbb84b59bed88a675f20e61ae20900d44bd4a23462c2184a6601b9e112f7b6d",
+              "merged": "Source: verified-source.txt\nReview: required\n",
+              "diffs": {
+                "ours": "--- BASE\n+++ OURS\n@@ -1,2 +1,2 @@\n-Source: draft.txt\n+Source: verified-source.txt\n Review: optional\n",
+                "theirs": "--- BASE\n+++ THEIRS\n@@ -1,2 +1,2 @@\n Source: draft.txt\n-Review: optional\n+Review: required\n"
+              },
+              "conflicts": [],
+              "limits": [
+                "Line-based alignment can be ambiguous on repeated text.",
+                "Clean means no textual conflict, not semantic correctness.",
+                "Hashes identify bytes; they do not authenticate an author."
+              ]
+            },
+            "diffs": {
+              "ours": "--- BASE\n+++ OURS\n@@ -1,2 +1,2 @@\n-Source: draft.txt\n+Source: verified-source.txt\n Review: optional\n",
+              "theirs": "--- BASE\n+++ THEIRS\n@@ -1,2 +1,2 @@\n Source: draft.txt\n-Review: optional\n+Review: required\n"
+            }
+          },
+          {
+            "path": "notes.txt",
+            "inputs": {
+              "base": {
+                "kind": "missing"
+              },
+              "ours": {
+                "kind": "file",
+                "sha256": "6c6b54891e147048ad66834740c776f6e34f1a8782682f26a1c4f333cae6112f",
+                "bytes": 25
+              },
+              "theirs": {
+                "kind": "missing"
+              }
+            },
+            "status": "ours",
+            "candidate": "Keep the source receipt.\n",
+            "candidate_sha256": "6c6b54891e147048ad66834740c776f6e34f1a8782682f26a1c4f333cae6112f",
+            "review": null,
+            "diffs": {
+              "ours": "--- BASE\n+++ OURS\n@@ -0,0 +1 @@\n+Keep the source receipt.\n",
+              "theirs": ""
+            }
+          },
+          {
+            "path": "obsolete.txt",
+            "inputs": {
+              "base": {
+                "kind": "file",
+                "sha256": "3c87c88bf6d406703d4b45f5167b989f16e471a382e65f307c1ea3592c610259",
+                "bytes": 16
+              },
+              "ours": {
+                "kind": "file",
+                "sha256": "3c87c88bf6d406703d4b45f5167b989f16e471a382e65f307c1ea3592c610259",
+                "bytes": 16
+              },
+              "theirs": {
+                "kind": "missing"
+              }
+            },
+            "status": "deleted",
+            "candidate": null,
+            "candidate_sha256": null,
+            "review": null,
+            "diffs": {
+              "ours": "",
+              "theirs": "--- BASE\n+++ THEIRS\n@@ -1 +0,0 @@\n-superseded note\n"
+            }
+          }
+        ],
+        "limits": [
+          "Review only: no files are written or deleted.",
+          "Empty directories, permissions and renames are not merged.",
+          "Any file/directory type collision is conservatively a conflict.",
+          "Line alignment can be ambiguous; clean is not semantic correctness.",
+          "Hashes identify bytes, not authors; reads require stable trusted trees.",
+          "No filesystem snapshot or protection against concurrent path replacement."
+        ]
+      }
+    },
+    {
+      "command": "python3 -B line-1/tools/tree-review/tree_review.py --demo conflict --format json",
+      "exit": 1,
+      "expected_exit": 1,
+      "result": {
+        "schema": "tree-review/v1",
+        "clean": false,
+        "inputs": {
+          "base": {
+            "sha256": "5e74c88993923978fd0556a14930166a7d1d17d3d2e2a235776f1572632fcaee",
+            "files": 2,
+            "directories": 0,
+            "bytes": 51
+          },
+          "ours": {
+            "sha256": "1fafc11dd191e8648f7575364f78d34e0d91c2bfedba68b476b1aeb1c1623326",
+            "files": 3,
+            "directories": 0,
+            "bytes": 96
+          },
+          "theirs": {
+            "sha256": "1221539821ce5dbafe30dc8cff085f4e8b6b8bb3448b8efb5359117df4b00d7a",
+            "files": 1,
+            "directories": 0,
+            "bytes": 35
+          }
+        },
+        "counts": {
+          "merged": 1,
+          "ours": 1,
+          "delete-modify-conflict": 1
+        },
+        "path_conflicts": [],
+        "files": [
+          {
+            "path": "guide.md",
+            "inputs": {
+              "base": {
+                "kind": "file",
+                "sha256": "29959701dbcd0459539c6c4702125690a5127121cc74db18e60fe88067cd4064",
+                "bytes": 35
+              },
+              "ours": {
+                "kind": "file",
+                "sha256": "81160defd2a84b85cecd57588116f5b5b63e9eeee70f5595f2c4235d255b9dca",
+                "bytes": 45
+              },
+              "theirs": {
+                "kind": "file",
+                "sha256": "560eb1b5eed675c3aa42cae5c80d3a750b4d653ea3867158e35d0b5c8a373501",
+                "bytes": 35
+              }
+            },
+            "status": "merged",
+            "candidate": "Source: verified-source.txt\nReview: required\n",
+            "candidate_sha256": "6cbb84b59bed88a675f20e61ae20900d44bd4a23462c2184a6601b9e112f7b6d",
+            "review": {
+              "schema": "merge-review/v1",
+              "clean": true,
+              "inputs": {
+                "base": {
+                  "sha256": "29959701dbcd0459539c6c4702125690a5127121cc74db18e60fe88067cd4064",
+                  "bytes": 35,
+                  "lines": 2
+                },
+                "ours": {
+                  "sha256": "81160defd2a84b85cecd57588116f5b5b63e9eeee70f5595f2c4235d255b9dca",
+                  "bytes": 45,
+                  "lines": 2
+                },
+                "theirs": {
+                  "sha256": "560eb1b5eed675c3aa42cae5c80d3a750b4d653ea3867158e35d0b5c8a373501",
+                  "bytes": 35,
+                  "lines": 2
+                }
+              },
+              "merged_sha256": "6cbb84b59bed88a675f20e61ae20900d44bd4a23462c2184a6601b9e112f7b6d",
+              "merged": "Source: verified-source.txt\nReview: required\n",
+              "diffs": {
+                "ours": "--- BASE\n+++ OURS\n@@ -1,2 +1,2 @@\n-Source: draft.txt\n+Source: verified-source.txt\n Review: optional\n",
+                "theirs": "--- BASE\n+++ THEIRS\n@@ -1,2 +1,2 @@\n Source: draft.txt\n-Review: optional\n+Review: required\n"
+              },
+              "conflicts": [],
+              "limits": [
+                "Line-based alignment can be ambiguous on repeated text.",
+                "Clean means no textual conflict, not semantic correctness.",
+                "Hashes identify bytes; they do not authenticate an author."
+              ]
+            },
+            "diffs": {
+              "ours": "--- BASE\n+++ OURS\n@@ -1,2 +1,2 @@\n-Source: draft.txt\n+Source: verified-source.txt\n Review: optional\n",
+              "theirs": "--- BASE\n+++ THEIRS\n@@ -1,2 +1,2 @@\n Source: draft.txt\n-Review: optional\n+Review: required\n"
+            }
+          },
+          {
+            "path": "notes.txt",
+            "inputs": {
+              "base": {
+                "kind": "missing"
+              },
+              "ours": {
+                "kind": "file",
+                "sha256": "6c6b54891e147048ad66834740c776f6e34f1a8782682f26a1c4f333cae6112f",
+                "bytes": 25
+              },
+              "theirs": {
+                "kind": "missing"
+              }
+            },
+            "status": "ours",
+            "candidate": "Keep the source receipt.\n",
+            "candidate_sha256": "6c6b54891e147048ad66834740c776f6e34f1a8782682f26a1c4f333cae6112f",
+            "review": null,
+            "diffs": {
+              "ours": "--- BASE\n+++ OURS\n@@ -0,0 +1 @@\n+Keep the source receipt.\n",
+              "theirs": ""
+            }
+          },
+          {
+            "path": "obsolete.txt",
+            "inputs": {
+              "base": {
+                "kind": "file",
+                "sha256": "3c87c88bf6d406703d4b45f5167b989f16e471a382e65f307c1ea3592c610259",
+                "bytes": 16
+              },
+              "ours": {
+                "kind": "file",
+                "sha256": "f072ee48bff3fe8d4ff3460702695b36961d53ea878a7130f709fc0ca7cb6dde",
+                "bytes": 26
+              },
+              "theirs": {
+                "kind": "missing"
+              }
+            },
+            "status": "delete-modify-conflict",
+            "candidate": null,
+            "candidate_sha256": null,
+            "review": null,
+            "diffs": {
+              "ours": "--- BASE\n+++ OURS\n@@ -1 +1 @@\n-superseded note\n+Keep this corrected note.\n",
+              "theirs": "--- BASE\n+++ THEIRS\n@@ -1 +0,0 @@\n-superseded note\n"
+            },
+            "versions": {
+              "base": "superseded note\n",
+              "ours": "Keep this corrected note.\n",
+              "theirs": null
+            }
+          }
+        ],
+        "limits": [
+          "Review only: no files are written or deleted.",
+          "Empty directories, permissions and renames are not merged.",
+          "Any file/directory type collision is conservatively a conflict.",
+          "Line alignment can be ambiguous; clean is not semantic correctness.",
+          "Hashes identify bytes, not authors; reads require stable trusted trees.",
+          "No filesystem snapshot or protection against concurrent path replacement."
+        ]
+      }
+    },
+    {
+      "command": "python3 -B line-2/tools/state-witness/witness.py demo",
+      "exit": 0,
+      "expected_exit": 0,
+      "result": {
+        "accountExists": true,
+        "address": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+        "codeHash": "0x24e03ed7d7d3d6dc010b9a9836e419a3eb4215383b463f4e6685b4816435f16d",
+        "demo": "Real captured ZTO state; bundled anchor is illustrative, not independently authenticated.",
+        "nativeBalanceWei": "0",
+        "nonce": "0x1",
+        "stateRoot": "0x70c13580735123b57c0a9a24692875f4ef366b04c69d92af9f539561e626d512",
+        "storage": [
+          {
+            "exists": false,
+            "slot": "0x0",
+            "value": "0x0"
+          },
+          {
+            "exists": false,
+            "slot": "0x1",
+            "value": "0x0"
+          }
+        ],
+        "storageRoot": "0x9f797ae0bae7c79c8f9c259b07a2fbca558644948b458448d501a03e5b6b98c8",
+        "trust": "Proven relative to the supplied state root; consensus, block identity, and finality are not verified.",
+        "verified": true
+      }
+    },
+    {
+      "command": "python3 -B line-2/tools/state-witness/witness.py demo --pool",
+      "exit": 0,
+      "expected_exit": 0,
+      "result": {
+        "accountExists": true,
+        "address": "0x000000000004444c5dc75cb358380d2e3de08a90",
+        "codeHash": "0x785f1014552b7ce7d5fb7d0c970ca60edee94fd00425d7ca21609acac7ce1293",
+        "demo": "Real captured ZTO state; bundled anchor is illustrative, not independently authenticated.",
+        "nativeBalanceWei": "57499945682580518811968",
+        "nonce": "0x1",
+        "stateRoot": "0x70c13580735123b57c0a9a24692875f4ef366b04c69d92af9f539561e626d512",
+        "storage": [
+          {
+            "exists": true,
+            "slot": "0x85763e16f60121d4266264cb693cca4d6bdb9e98ff9cc3d698d892d90342971b",
+            "value": "0x30d400000001b32f000000000000010675ff9d949ea2d3c11613bc41"
+          }
+        ],
+        "storageRoot": "0x6071a51b5b6739ea7b7d63b4ee086311b3a11b2f41a02f13f30158e99c1377c0",
+        "trust": "Proven relative to the supplied state root; consensus, block identity, and finality are not verified.",
+        "verified": true
+      }
+    },
+    {
+      "command": "python3 -B line-2/tools/header-anchor/anchor.py demo",
+      "exit": 0,
+      "expected_exit": 0,
+      "result": {
+        "anchor": {
+          "blockHash": "0x38dc4deb12174972d332cc1f95008b25ea87434f420ce0a51938e1b28755e9dc",
+          "blockNumber": "0x18ff826",
+          "headerSchema": "prague",
+          "stateRoot": "0x70c13580735123b57c0a9a24692875f4ef366b04c69d92af9f539561e626d512",
+          "timestamp": "0x6ad36f57"
+        },
+        "demo": "Historical RPC observation; the bundled block hash is illustrative, not a consensus-authenticated checkpoint.",
+        "state": {
+          "accountExists": true,
+          "address": "0x000000000004444c5dc75cb358380d2e3de08a90",
+          "codeHash": "0x785f1014552b7ce7d5fb7d0c970ca60edee94fd00425d7ca21609acac7ce1293",
+          "nativeBalanceWei": "57499945682580518811968",
+          "nonce": "0x1",
+          "stateRoot": "0x70c13580735123b57c0a9a24692875f4ef366b04c69d92af9f539561e626d512",
+          "storage": [
+            {
+              "exists": true,
+              "slot": "0x85763e16f60121d4266264cb693cca4d6bdb9e98ff9cc3d698d892d90342971b",
+              "value": "0x30d400000001b32f000000000000010675ff9d949ea2d3c11613bc41"
+            }
+          ],
+          "storageRoot": "0x6071a51b5b6739ea7b7d63b4ee086311b3a11b2f41a02f13f30158e99c1377c0",
+          "verified": true
+        },
+        "trust": "Header and state proof match the supplied block hash. The caller must authenticate that hash and its chain, canonicality and finality independently. Consensus and execution validity are not checked.",
+        "verified": true
+      }
+    },
+    {
+      "command": "python3 -B line-2/tools/code-witness/code_witness.py demo",
+      "exit": 0,
+      "expected_exit": 0,
+      "result": {
+        "anchor": {
+          "blockHash": "0x38dc4deb12174972d332cc1f95008b25ea87434f420ce0a51938e1b28755e9dc",
+          "blockNumber": "0x18ff826",
+          "headerSchema": "prague",
+          "stateRoot": "0x70c13580735123b57c0a9a24692875f4ef366b04c69d92af9f539561e626d512",
+          "timestamp": "0x6ad36f57"
+        },
+        "code": {
+          "byteLength": 1287,
+          "keccak256": "0x24e03ed7d7d3d6dc010b9a9836e419a3eb4215383b463f4e6685b4816435f16d",
+          "storedCodeKind": "nonempty",
+          "verified": true
+        },
+        "demo": "Historical ZTO mainnet observation; bundled hash is not an independently authenticated checkpoint.",
+        "state": {
+          "accountExists": true,
+          "address": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+          "codeHash": "0x24e03ed7d7d3d6dc010b9a9836e419a3eb4215383b463f4e6685b4816435f16d",
+          "nativeBalanceWei": "0",
+          "nonce": "0x1",
+          "stateRoot": "0x70c13580735123b57c0a9a24692875f4ef366b04c69d92af9f539561e626d512",
+          "storage": [
+            {
+              "exists": false,
+              "slot": "0x0",
+              "value": "0x0"
+            },
+            {
+              "exists": false,
+              "slot": "0x1",
+              "value": "0x0"
+            }
+          ],
+          "storageRoot": "0x9f797ae0bae7c79c8f9c259b07a2fbca558644948b458448d501a03e5b6b98c8",
+          "verified": true
+        },
+        "trust": "Header and state proof match the supplied block hash. The caller must authenticate that hash and its chain, canonicality and finality independently. Consensus and execution validity are not checked. Supplied bytes match the account code commitment only. Source, ABI, storage layout, proxy/delegation targets and execution behavior are not verified. Empty bytes do not establish that an address has no protocol-defined behavior.",
+        "verified": true
+      }
+    },
+    {
+      "command": "python3 -B line-3/tools/evidence-search/search.py demo",
+      "exit": 0,
+      "expected_exit": 0,
+      "result": {
+        "format": "evidence-search-results/v1",
+        "query": "ZTO token decimals",
+        "terms": [
+          "decimals",
+          "token",
+          "zto"
+        ],
+        "require_all": false,
+        "indexed_documents": 3,
+        "indexed_passages": 6,
+        "hits": [
+          {
+            "path": "zto.md",
+            "line_start": 1,
+            "line_end": 9,
+            "citation": "zto.md:1-9",
+            "sha256": "03a74a78fa9fd52080b1b21385dafb47dc07c2422ff2e6ff327cbf3d94da8009",
+            "source_verified": true,
+            "score": 1.98479013,
+            "matched_terms": [
+              "decimals",
+              "token",
+              "zto"
+            ],
+            "text": "# ZTO on Ethereum\n\nZTO token name: Zero To One.\nContract address: 0xd782bdea4ef02a0bd391eb9089470c8080f0a68e.\nChain ID: 1 (Ethereum mainnet).\nToken decimals: 18.\nTotal supply in smallest token units: 1000000000000000000000000000.\n\n## Observation and trust"
+          },
+          {
+            "path": "imd.md",
+            "line_start": 1,
+            "line_end": 9,
+            "citation": "imd.md:1-9",
+            "sha256": "a14adad1d92e8b0dd5a819ff569978278223947382df8e5d4b15e66d897eba40",
+            "source_verified": true,
+            "score": 1.63072322,
+            "matched_terms": [
+              "decimals",
+              "token"
+            ],
+            "text": "# IMD on Ethereum\n\nIMD token name: Identity.md.\nContract address: 0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7.\nChain ID: 1 (Ethereum mainnet).\nToken decimals: 18.\nTotal supply in smallest token units: 4166876402822000000000000.\n\n## Observation and trust"
+          },
+          {
+            "path": "pool.md",
+            "line_start": 10,
+            "line_end": 16,
+            "citation": "pool.md:10-16",
+            "sha256": "c0550528c6de8499660048c0ee32a7770fab2015ade42e00f30070b9a434008b",
+            "source_verified": true,
+            "score": 0.55731351,
+            "matched_terms": [
+              "token",
+              "zto"
+            ],
+            "text": "## Source boundary\n\nThe pool identifiers and parameters above come from the assignment's public\nZTO reference. They were not independently recovered or verified on-chain here.\nToken metadata in zto.md and imd.md was separately observed through read-only\nEthereum RPC calls; the companion zto-mainnet.json records those responses.\nThis document does not contain a live price, a quote, or an unsigned transaction."
+          }
+        ]
+      }
+    },
+    {
+      "command": "python3 -B line-3/tools/corpus-freshness/freshness.py demo",
+      "exit": 0,
+      "expected_exit": 0,
+      "result": {
+        "freshness": {
+          "format": "evidence-corpus-freshness/v1",
+          "fresh": true,
+          "indexed_documents": 3,
+          "current_documents": 3,
+          "added": [],
+          "removed": [],
+          "changed": []
+        },
+        "search": {
+          "format": "evidence-search-results/v1",
+          "query": "ZTO token decimals",
+          "terms": [
+            "decimals",
+            "token",
+            "zto"
+          ],
+          "require_all": false,
+          "indexed_documents": 3,
+          "indexed_passages": 6,
+          "hits": [
+            {
+              "path": "zto.md",
+              "line_start": 1,
+              "line_end": 9,
+              "citation": "zto.md:1-9",
+              "sha256": "03a74a78fa9fd52080b1b21385dafb47dc07c2422ff2e6ff327cbf3d94da8009",
+              "source_verified": true,
+              "score": 1.98479013,
+              "matched_terms": [
+                "decimals",
+                "token",
+                "zto"
+              ],
+              "text": "# ZTO on Ethereum\n\nZTO token name: Zero To One.\nContract address: 0xd782bdea4ef02a0bd391eb9089470c8080f0a68e.\nChain ID: 1 (Ethereum mainnet).\nToken decimals: 18.\nTotal supply in smallest token units: 1000000000000000000000000000.\n\n## Observation and trust"
+            },
+            {
+              "path": "imd.md",
+              "line_start": 1,
+              "line_end": 9,
+              "citation": "imd.md:1-9",
+              "sha256": "a14adad1d92e8b0dd5a819ff569978278223947382df8e5d4b15e66d897eba40",
+              "source_verified": true,
+              "score": 1.63072322,
+              "matched_terms": [
+                "decimals",
+                "token"
+              ],
+              "text": "# IMD on Ethereum\n\nIMD token name: Identity.md.\nContract address: 0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7.\nChain ID: 1 (Ethereum mainnet).\nToken decimals: 18.\nTotal supply in smallest token units: 4166876402822000000000000.\n\n## Observation and trust"
+            },
+            {
+              "path": "pool.md",
+              "line_start": 10,
+              "line_end": 16,
+              "citation": "pool.md:10-16",
+              "sha256": "c0550528c6de8499660048c0ee32a7770fab2015ade42e00f30070b9a434008b",
+              "source_verified": true,
+              "score": 0.55731351,
+              "matched_terms": [
+                "token",
+                "zto"
+              ],
+              "text": "## Source boundary\n\nThe pool identifiers and parameters above come from the assignment's public\nZTO reference. They were not independently recovered or verified on-chain here.\nToken metadata in zto.md and imd.md was separately observed through read-only\nEthereum RPC calls; the companion zto-mainnet.json records those responses.\nThis document does not contain a live price, a quote, or an unsigned transaction."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "command": "python3 -B line-3/tools/search-receipt/receipt.py demo",
+      "exit": 0,
+      "expected_exit": 0,
+      "result": {
+        "receipt": {
+          "format": "evidence-search-receipt/v1",
+          "request": {
+            "query": "ZTO token decimals",
+            "limit": 5,
+            "require_all": true
+          },
+          "sources": [
+            {
+              "path": "imd.md",
+              "sha256": "a14adad1d92e8b0dd5a819ff569978278223947382df8e5d4b15e66d897eba40"
+            },
+            {
+              "path": "pool.md",
+              "sha256": "c0550528c6de8499660048c0ee32a7770fab2015ade42e00f30070b9a434008b"
+            },
+            {
+              "path": "zto.md",
+              "sha256": "03a74a78fa9fd52080b1b21385dafb47dc07c2422ff2e6ff327cbf3d94da8009"
+            }
+          ],
+          "result": {
+            "format": "evidence-search-results/v1",
+            "query": "ZTO token decimals",
+            "terms": [
+              "decimals",
+              "token",
+              "zto"
+            ],
+            "require_all": true,
+            "indexed_documents": 3,
+            "indexed_passages": 6,
+            "hits": [
+              {
+                "path": "zto.md",
+                "line_start": 1,
+                "line_end": 9,
+                "citation": "zto.md:1-9",
+                "sha256": "03a74a78fa9fd52080b1b21385dafb47dc07c2422ff2e6ff327cbf3d94da8009",
+                "source_verified": true,
+                "score": 1.98479013,
+                "matched_terms": [
+                  "decimals",
+                  "token",
+                  "zto"
+                ],
+                "text": "# ZTO on Ethereum\n\nZTO token name: Zero To One.\nContract address: 0xd782bdea4ef02a0bd391eb9089470c8080f0a68e.\nChain ID: 1 (Ethereum mainnet).\nToken decimals: 18.\nTotal supply in smallest token units: 1000000000000000000000000000.\n\n## Observation and trust"
+              }
+            ]
+          }
+        },
+        "verification": {
+          "format": "evidence-search-receipt-check/v1",
+          "verified": true,
+          "receipt_sha256": "eb68004d99b400202f289750fd24909060cd440a5d69996585ce3c298683f3fb",
+          "expected_sha256": "eb68004d99b400202f289750fd24909060cd440a5d69996585ce3c298683f3fb",
+          "hash_matches": true,
+          "sources": {
+            "fresh": true,
+            "added": [],
+            "removed": [],
+            "changed": []
+          },
+          "result_matches": true,
+          "reason": "verified"
+        },
+        "note": "Historical bundled ZTO evidence; verification does not establish factual truth or current chain state."
+      }
+    },
+    {
+      "command": "python3 -B line-4/tools/offline-resolver/resolve.py demo",
+      "exit": 0,
+      "expected_exit": 0,
+      "result": {
+        "edges": [
+          {
+            "constraint": ">=2017.4.17",
+            "from": "requests@2.32.5",
+            "to": "certifi@2025.10.5"
+          },
+          {
+            "constraint": "<4,>=2",
+            "from": "requests@2.32.5",
+            "to": "charset-normalizer@3.4.4"
+          },
+          {
+            "constraint": "<4,>=2.5",
+            "from": "requests@2.32.5",
+            "to": "idna@3.11"
+          },
+          {
+            "constraint": "<3,>=1.21.1",
+            "from": "requests@2.32.5",
+            "to": "urllib3@1.26.20"
+          }
+        ],
+        "max_steps": 10000,
+        "roots": {
+          "requests": "==2.32.5",
+          "urllib3": "<2"
+        },
+        "selected": {
+          "certifi": "2025.10.5",
+          "charset-normalizer": "3.4.4",
+          "idna": "3.11",
+          "requests": "2.32.5",
+          "urllib3": "1.26.20"
+        },
+        "status": "resolved",
+        "steps": 6
+      }
+    },
+    {
+      "command": "python3 -B line-4/tools/offline-resolver/resolve.py demo --max-steps 1",
+      "exit": 3,
+      "expected_exit": 3,
+      "result": {
+        "max_steps": 1,
+        "reason": "decision budget exhausted",
+        "status": "inconclusive",
+        "steps": 1
+      }
+    },
+    {
+      "command": "python3 -B line-4/tools/conflict-core/core.py demo",
+      "exit": 0,
+      "expected_exit": 0,
+      "result": {
+        "audit": {
+          "claim": "unsatisfiable",
+          "core_search_steps": 2,
+          "method": "Independent assignment checks and inherited-solver core search; not an independently certified unsatisfiability proof.",
+          "minimality": "irreducible",
+          "removal_witnesses_checked": 2,
+          "status": "verified"
+        },
+        "report": {
+          "catalog_sha256": "a6e92f561ad112d9f4f311ea4e6100d7694254c6c7a77df3605109c67d3339d9",
+          "core": {
+            "idna": ">=3.10",
+            "requests": "==2.25.1"
+          },
+          "dropped_roots": {
+            "certifi": ">=2017.4.17",
+            "urllib3": "<2"
+          },
+          "explanation": "The core has no solution in this finite catalog. Each removal witness satisfies all other core roots. Irreducible means no single core root can be removed; it does not mean smallest possible core or a suggested repair.",
+          "minimality": "irreducible",
+          "removal_witnesses": {
+            "idna": {
+              "certifi": "2025.10.5",
+              "chardet": "4.0.0",
+              "idna": "2.10",
+              "requests": "2.25.1",
+              "urllib3": "1.26.20"
+            },
+            "requests": {
+              "idna": "3.11"
+            }
+          },
+          "representative_conflict": {
+            "available_versions": [
+              "3.11",
+              "3.10",
+              "2.10"
+            ],
+            "branch": {
+              "requests": "2.25.1"
+            },
+            "package": "idna",
+            "requirements": [
+              {
+                "constraint": ">=3.10",
+                "source": "root"
+              },
+              {
+                "constraint": ">=2.5,<3",
+                "source": "requests@2.25.1"
+              }
+            ],
+            "selected_version": null
+          },
+          "roots": {
+            "certifi": ">=2017.4.17",
+            "idna": ">=3.10",
+            "requests": "==2.25.1",
+            "urllib3": "<2"
+          },
+          "schema": 1,
+          "search": {
+            "max_steps": 10000,
+            "solver_calls": 5,
+            "steps": 15
+          },
+          "status": "unsatisfiable",
+          "trials": [
+            {
+              "removed_root": "certifi",
+              "status": "unsatisfiable",
+              "steps": 2
+            },
+            {
+              "removed_root": "idna",
+              "status": "resolved",
+              "steps": 6
+            },
+            {
+              "removed_root": "requests",
+              "status": "resolved",
+              "steps": 3
+            },
+            {
+              "removed_root": "urllib3",
+              "status": "unsatisfiable",
+              "steps": 2
+            }
+          ]
+        }
+      }
+    },
+    {
+      "command": "python3 -B line-4/tools/conflict-core/core.py demo --max-steps 1",
+      "exit": 3,
+      "expected_exit": 3,
+      "result": {
+        "catalog_sha256": "a6e92f561ad112d9f4f311ea4e6100d7694254c6c7a77df3605109c67d3339d9",
+        "reason": "decision budget exhausted",
+        "roots": {
+          "certifi": ">=2017.4.17",
+          "idna": ">=3.10",
+          "requests": "==2.25.1",
+          "urllib3": "<2"
+        },
+        "schema": 1,
+        "search": {
+          "max_steps": 1,
+          "solver_calls": 1,
+          "steps": 1
+        },
+        "status": "inconclusive"
+      }
+    },
+    {
+      "command": "python3 -B line-1/tools/review-recheck/recheck.py --demo clean",
+      "exit": 0,
+      "expected_exit": 0,
+      "result": {
+        "schema": "review-recheck/v1",
+        "matches": true,
+        "changed_inputs": [],
+        "review_matches": true,
+        "current_clean": true,
+        "status": "matches-clean",
+        "limits": [
+          "Matching verifies reproducibility, not author identity or approval.",
+          "A matching conflicted review still requires conflict resolution.",
+          "A clean textual merge can be semantically wrong.",
+          "Reads require stable trusted workspace trees; no atomic snapshot.",
+          "Requires the same tree-review implementation and limits."
+        ]
+      }
+    },
+    {
+      "command": "python3 -B line-1/tools/review-recheck/recheck.py --demo conflict",
+      "exit": 0,
+      "expected_exit": 0,
+      "result": {
+        "schema": "review-recheck/v1",
+        "matches": true,
+        "changed_inputs": [],
+        "review_matches": true,
+        "current_clean": false,
+        "status": "matches-conflicted",
+        "limits": [
+          "Matching verifies reproducibility, not author identity or approval.",
+          "A matching conflicted review still requires conflict resolution.",
+          "A clean textual merge can be semantically wrong.",
+          "Reads require stable trusted workspace trees; no atomic snapshot.",
+          "Requires the same tree-review implementation and limits."
+        ]
+      }
+    },
+    {
+      "command": "python3 -B line-1/tools/review-recheck/recheck.py --demo stale",
+      "exit": 1,
+      "expected_exit": 1,
+      "result": {
+        "schema": "review-recheck/v1",
+        "matches": false,
+        "changed_inputs": [
+          "base",
+          "ours",
+          "theirs"
+        ],
+        "review_matches": false,
+        "current_clean": true,
+        "status": "stale-inputs",
+        "limits": [
+          "Matching verifies reproducibility, not author identity or approval.",
+          "A matching conflicted review still requires conflict resolution.",
+          "A clean textual merge can be semantically wrong.",
+          "Reads require stable trusted workspace trees; no atomic snapshot.",
+          "Requires the same tree-review implementation and limits."
+        ]
+      }
+    },
+    {
+      "command": "python3 -B line-1/tools/review-recheck/recheck.py --demo tampered",
+      "exit": 1,
+      "expected_exit": 1,
+      "result": {
+        "schema": "review-recheck/v1",
+        "matches": false,
+        "changed_inputs": [],
+        "review_matches": false,
+        "current_clean": true,
+        "status": "review-mismatch",
+        "limits": [
+          "Matching verifies reproducibility, not author identity or approval.",
+          "A matching conflicted review still requires conflict resolution.",
+          "A clean textual merge can be semantically wrong.",
+          "Reads require stable trusted workspace trees; no atomic snapshot.",
+          "Requires the same tree-review implementation and limits."
+        ]
+      }
+    },
+    {
+      "command": "python3 -B line-2/tools/proof-set/proof_set.py demo",
+      "exit": 0,
+      "expected_exit": 0,
+      "result": {
+        "accounts": [
+          {
+            "code": {
+              "byteLength": 1287,
+              "keccak256": "0x24e03ed7d7d3d6dc010b9a9836e419a3eb4215383b463f4e6685b4816435f16d",
+              "storedCodeKind": "nonempty",
+              "verified": true
+            },
+            "state": {
+              "accountExists": true,
+              "address": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+              "codeHash": "0x24e03ed7d7d3d6dc010b9a9836e419a3eb4215383b463f4e6685b4816435f16d",
+              "nativeBalanceWei": "0",
+              "nonce": "0x1",
+              "stateRoot": "0x70c13580735123b57c0a9a24692875f4ef366b04c69d92af9f539561e626d512",
+              "storage": [
+                {
+                  "exists": false,
+                  "slot": "0x0",
+                  "value": "0x0"
+                },
+                {
+                  "exists": false,
+                  "slot": "0x1",
+                  "value": "0x0"
+                }
+              ],
+              "storageRoot": "0x9f797ae0bae7c79c8f9c259b07a2fbca558644948b458448d501a03e5b6b98c8",
+              "verified": true
+            }
+          },
+          {
+            "state": {
+              "accountExists": true,
+              "address": "0x000000000004444c5dc75cb358380d2e3de08a90",
+              "codeHash": "0x785f1014552b7ce7d5fb7d0c970ca60edee94fd00425d7ca21609acac7ce1293",
+              "nativeBalanceWei": "57499945682580518811968",
+              "nonce": "0x1",
+              "stateRoot": "0x70c13580735123b57c0a9a24692875f4ef366b04c69d92af9f539561e626d512",
+              "storage": [
+                {
+                  "exists": true,
+                  "slot": "0x85763e16f60121d4266264cb693cca4d6bdb9e98ff9cc3d698d892d90342971b",
+                  "value": "0x30d400000001b32f000000000000010675ff9d949ea2d3c11613bc41"
+                }
+              ],
+              "storageRoot": "0x6071a51b5b6739ea7b7d63b4ee086311b3a11b2f41a02f13f30158e99c1377c0",
+              "verified": true
+            }
+          }
+        ],
+        "anchor": {
+          "blockHash": "0x38dc4deb12174972d332cc1f95008b25ea87434f420ce0a51938e1b28755e9dc",
+          "blockNumber": "0x18ff826",
+          "headerSchema": "prague",
+          "stateRoot": "0x70c13580735123b57c0a9a24692875f4ef366b04c69d92af9f539561e626d512",
+          "timestamp": "0x6ad36f57"
+        },
+        "demo": "Historical RPC observation; the fixed demonstration hash is not a consensus-authenticated checkpoint.",
+        "manifestSha256": "a4e9d3fb56c90bf1202ac3d53b8ce7c557febe06d88581a9430a2f6a59f14e8f",
+        "trust": "Every listed account and slot is proven against one header matching the supplied hash. The caller must authenticate that hash, chain, canonicality and finality independently. Code checks establish stored byte identity only, not source, ABI, layout, proxy targets or behavior.",
+        "verified": true
+      }
+    },
+    {
+      "command": "python3 -B line-3/tools/evidence-bundle/bundle.py demo",
+      "exit": 0,
+      "expected_exit": 0,
+      "result": {
+        "check": {
+          "format": "evidence-bundle-check/v1",
+          "integrity_matches": true,
+          "bundle_sha256": "4199bcadadc0df319c7e98137bf3ee83e4895373bedf35d929ba3ff5984b48e2",
+          "expected_sha256": "4199bcadadc0df319c7e98137bf3ee83e4895373bedf35d929ba3ff5984b48e2",
+          "documents": 3,
+          "source_bytes": 2126,
+          "receipt_sha256": "eb68004d99b400202f289750fd24909060cd440a5d69996585ce3c298683f3fb",
+          "receipt_reproduced": false
+        },
+        "receipt_result": {
+          "format": "evidence-search-results/v1",
+          "query": "ZTO token decimals",
+          "terms": [
+            "decimals",
+            "token",
+            "zto"
+          ],
+          "require_all": true,
+          "indexed_documents": 3,
+          "indexed_passages": 6,
+          "hits": [
+            {
+              "path": "zto.md",
+              "line_start": 1,
+              "line_end": 9,
+              "citation": "zto.md:1-9",
+              "sha256": "03a74a78fa9fd52080b1b21385dafb47dc07c2422ff2e6ff327cbf3d94da8009",
+              "source_verified": true,
+              "score": 1.98479013,
+              "matched_terms": [
+                "decimals",
+                "token",
+                "zto"
+              ],
+              "text": "# ZTO on Ethereum\n\nZTO token name: Zero To One.\nContract address: 0xd782bdea4ef02a0bd391eb9089470c8080f0a68e.\nChain ID: 1 (Ethereum mainnet).\nToken decimals: 18.\nTotal supply in smallest token units: 1000000000000000000000000000.\n\n## Observation and trust"
+            }
+          ]
+        },
+        "note": "In-memory pack/check; no files written. Unpack reproduces the receipt. Historical ZTO evidence, not current chain state or truth authentication."
+      }
+    }
+  ],
+  "line_files_unchanged": true,
+  "protected_files": {
+    "line-1/CHECKS-23.json": "fcc2695455ffb179f0d1323c1ebb0db3d27e950421be1c67206d77e779ee67b5",
+    "line-1/CHECKS-24.json": "7f7e76695348cc78c56a7a40c6eb656b21929952cb597687a859c02c056e8bc2",
+    "line-1/GOAL.md": "05e4531a1867a17011c0cc58f376c16c72fc60e430bfec8804a8cb1f6bffd737",
+    "line-1/IMAGE-23.json": "cdb2029cc84ff7579805c87c5388860f816ba7e9a047ea5072256f1b6a6e7910",
+    "line-1/IMAGE-24.json": "22a8ddb7b83bb97cc6dd1023750bd06461427a4dc1bcfd81ba4a3bd13c577ab6",
+    "line-1/README.md": "533ebd224d27c3e7cab82fbd09770e386f38dd2533a359f4231a4a5d277f961a",
+    "line-1/REAL-TRIAL-23.json": "1d55654c9294cd28cc73fc109d66ef6135191c2811f2f21bd114ca38173398d1",
+    "line-1/REAL-TRIAL-24.json": "c5a9be6887d47f4472063e1738f030cff3a83007297435689991e1d63319b61e",
+    "line-1/STEP-22.md": "6bf957822cae6a3043b65068335c2eed462b1aad760cf69de26bcc0cb6dd43bc",
+    "line-1/STEP-23.md": "d5a9925b48520ac9fb9e2d3ee3978b26cb501f6f4b6b74db25473ad188e9ac4d",
+    "line-1/STEP-24.md": "a16ed9aa15b1fca84ed660d4dbcde0bffc822fe6a2523c5949424282583c84a0",
+    "line-1/USED.md": "e07927164ada8930d76fcdf53abc0182cb1c585995c5d97c474cf8b8548083e2",
+    "line-1/finish_wall24.py": "0321a861350fb2f050c8632dd014cd8bdef263d66d29a1453d83dd6fb06c6cf1",
+    "line-1/tools/merge-review/README.md": "b220c9f315619a0d8cbf1bd5e9823544c6183b550b863ad3ebac60e0c816964e",
+    "line-1/tools/merge-review/review.py": "d5a883d9870e1174963a0a1a4029a490cb8ec9e1597a3c2332810b62f8d10ed2",
+    "line-1/tools/merge-review/test_review.py": "ea8462ac024ebcc55033d76e0576bdfa2d8ba792d8215253d8919139ccffee3a",
+    "line-1/tools/review-recheck/README.md": "f67356831b54f4d6ff9a542534821221c900afcec47133deb5f1751da61702ee",
+    "line-1/tools/review-recheck/recheck.py": "5d8bbeeaa34949ee3fec52065a6bb089057584bd1a592113a88132b077f40ec7",
+    "line-1/tools/review-recheck/test_recheck.py": "01ce691fa12bb6e4154c3d62fbc5f7d3862288c3fb75f05100fcd3c45b8d7420",
+    "line-1/tools/threeway/README.md": "99eac1d91323b3b51e57eebbc4338bb4715519bec5d51fa546b5e56acd87e003",
+    "line-1/tools/threeway/examples/base.txt": "b1968dd85fec4bc0786e41f49d6b1a6e91f57cd91384889ce54f516950e7c9f6",
+    "line-1/tools/threeway/examples/ours.txt": "232549fb5f6a02eb45e63a23838b128101683751ffd90027a36a1de7634eabfb",
+    "line-1/tools/threeway/examples/theirs.txt": "6a65c2b8d1538edc0f0fc66e523fe918f9fcf32e1e03ecc8194427383c5fd353",
+    "line-1/tools/threeway/merge.py": "256c6e4f169ac46d7ae68eb6ee5475a4915211ad6efa89edca75b1cbe8623b0e",
+    "line-1/tools/threeway/test_merge.py": "e30ac1fb3a648708aff51d3e74d0203bceec726d95edbecf716f785c5b7eabe4",
+    "line-1/tools/tree-review/README.md": "f2c9b6242ce8773e7e5885777d607cd49a8df37d1cecae054a9158eda09ad6c2",
+    "line-1/tools/tree-review/test_tree_review.py": "6214b9b3de9ac3b3147e689ab29c5ea764e06793b44e0d8ec4da7135c7acdef3",
+    "line-1/tools/tree-review/tree_review.py": "36a2277d551d0d2d7687d4b42fa174fa34307c3724f944b26befe86c937ed285",
+    "dist/line-1/01.jpg": "26f359ec280614311ac9aadb122c75bc8fa603f1368c4a4e5d9fa7defd2cc1c3",
+    "dist/line-1/01.json": "493951363c55eaf2b6b8a9705e66127acd93a5659e4ead2d37677e560dd2bd8d",
+    "dist/line-1/02.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-1/03.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-1/04.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-1/05.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-1/06.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-1/07.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-1/08.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-1/09.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-1/10.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-1/11.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-1/12.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-1/13.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-1/14.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-1/15.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-1/16.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-1/17.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-1/18.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-1/19.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-1/20.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-1/21.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-1/22.jpg": "f07073b9446178cda39d846be9c1a6163b5b680ac47e9dbcd9e903cfed8f0c35",
+    "dist/line-1/22.json": "2d386215ef851034a72ebfec060b684b5ff3c52997a4481743e2332cb4ae0451",
+    "dist/line-1/23.jpg": "c0af65921cbbcfa9447a9659b856d0c35f57bf1395ef48ea140c794a931e229c",
+    "dist/line-1/23.json": "342d8b77bca8232bf612bb1421abcbaabf39b2201852e7c69351b624750db845",
+    "dist/line-1/24.jpg": "b87c4303b84a162b6705618b816d0d32c3dab0b0e7d856b614e50009a3f71740",
+    "dist/line-1/24.json": "51f5e1c3e3bf965312cdf4fdfa0fe352fc8496fe78c6a1b5b80fc8255a2fd007",
+    "line-2/GOAL.md": "906f47a8b7394fdf209a3f60ace04d0b472c97c80ecf3f24e1d991a30f1a8837",
+    "line-2/README.md": "a6e87e184719e3735519468009a69d2ee8c91b680bcefcf617846081ed351ae2",
+    "line-2/REVIEW-22.json": "136bc51fbb261ccb190e809dfec32cb1f8f7e1df1a5fb430203d6c4a62b2660b",
+    "line-2/REVIEW-23.json": "4ccfc36e6fcc99cb0b0e9490a50f0d2d4cc06ee1bbbe471a2da04f33be2d95f4",
+    "line-2/REVIEW-24.json": "42bfd2692eeb94d7240e470e4e302cd952b796ecdcc6615e9550bde1bbbd00ef",
+    "line-2/ROUND-22.md": "949189fc0e0680250d80e9744502b1ed15dc63096308d4c4fdcfca9cc07e74fa",
+    "line-2/ROUND-23.md": "1d24edeff83f4b17ec3725b43ddac0d4e6b1270ec5887192bd0d00de41ddc0bb",
+    "line-2/ROUND-24.md": "3c338dcca5232e8adb3c3b2b6541aeb0103f2b3212584043c5e1ae15eac031da",
+    "line-2/USED.md": "446d33356186451652e7548e22c8590be3e118a9f1cd460705a577bc1c343226",
+    "line-2/tools/code-witness/README.md": "d81a261e51c710a37cdfd6186378763ada40c3952d6cd3f07c9d72c3b9038823",
+    "line-2/tools/code-witness/code_witness.py": "a3088e048af875cf8ececba54dd2dd0b850810880a3dde3dc6b0938304634cf7",
+    "line-2/tools/code-witness/examples/zto-runtime.hex": "25e2869688124f2caccaa01e7a7f52bdf1423a8772b9be6da6cbe28aedffae8e",
+    "line-2/tools/code-witness/test_code_witness.py": "d39a194c26c1557820f9849565f7d94384b1c980d75bae42282b0b4980a3ea61",
+    "line-2/tools/header-anchor/README.md": "a3f091a2dbec59385ee6c9e2c8530feba16977c25acfc61f9bfdbef85652099f",
+    "line-2/tools/header-anchor/anchor.py": "de9a6f7f92018574f97a8f7011b9d89f2e55ef79f201766cee1cd6d394186666",
+    "line-2/tools/header-anchor/examples/header-cancun.json": "abd8f6fc2f6ccf90beffbb5a3a9d628063d03fa357c2bf5375c573e8c100edd6",
+    "line-2/tools/header-anchor/examples/header-legacy.json": "88acf59de454685a21ee2ee21d45581ef414da37a589d19f272832f84404a898",
+    "line-2/tools/header-anchor/examples/header-london.json": "7513e125502b4f3a2004d00caf1a30032dbcbf7f564839caa7099505b393521f",
+    "line-2/tools/header-anchor/examples/header-shanghai.json": "461b02c5c7a9f9f54b92d4ac1e5b3768c57c98ef950de642759edb245457d87b",
+    "line-2/tools/header-anchor/examples/zto-header-mainnet.json": "47c5ed5d06379dd937d391dc5814c30eb0877800a0dcf85bdcc6389a38aebd57",
+    "line-2/tools/header-anchor/test_anchor.py": "06b0b526c7d5e0014e36a5b679209d5c76cc54420a719e3f1bb4c65535f43ef7",
+    "line-2/tools/proof-set/README.md": "15cfda413edc1ee90557af7d9116930e4970cdfa69691036c4e98b17ea686ac7",
+    "line-2/tools/proof-set/examples/zto-and-pool.json": "a4e9d3fb56c90bf1202ac3d53b8ce7c557febe06d88581a9430a2f6a59f14e8f",
+    "line-2/tools/proof-set/proof_set.py": "8b43116d17a4d389e2542d8d7aa7d798cfd7b5c0e85084d871968c9958cb3c28",
+    "line-2/tools/proof-set/test_proof_set.py": "077334783b4edd7c74bd6d04625e5c0b47f817138d2e8066914885983095f586",
+    "line-2/tools/state-witness/README.md": "74a851cd83945efb81a267d840156aa3df80ab109f833e4a3fac5a93b878f103",
+    "line-2/tools/state-witness/examples/zto-mainnet.json": "2266d59a8eecca1aa2424c82ae31c5b02fa3814b0bc77d348d8a9361347fb92d",
+    "line-2/tools/state-witness/examples/zto-pool-mainnet.json": "a0a503c8a62949af7adf0347d3af013ca5d6fc37f20d6e7fbf00b72092d1938f",
+    "line-2/tools/state-witness/test_witness.py": "fa27f01a222f2f7f8fdf0c129ec0c3f065c10ea5a64e433303d31bbb01d70fb7",
+    "line-2/tools/state-witness/witness.py": "88b7927c2bd4daaea1805b7fb996d5fb1980634be7da96ae59c2726afa6f2eb1",
+    "dist/line-2/01.jpg": "89f331a4e6d6d20a1947d17f215cd6bba6a2fdcfeb466937bf6093d1e7ec989f",
+    "dist/line-2/01.json": "d4f3206f29b48a5e75f812a33042ff069bf6056f6c6f382382c7780d33ce9495",
+    "dist/line-2/02.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-2/03.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-2/04.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-2/05.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-2/06.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-2/07.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-2/08.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-2/09.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-2/10.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-2/11.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-2/12.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-2/13.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-2/14.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-2/15.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-2/16.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-2/17.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-2/18.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-2/19.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-2/20.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-2/21.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-2/22.jpg": "53741363c2389c904d49b749e0d77a5bb9c4d8d2b70f8003dcd730689784d7da",
+    "dist/line-2/22.json": "6a48aa03e398f76196877fe8a2d5f6e7d4d59ccc00808d717260a1f9311002ce",
+    "dist/line-2/23.jpg": "6d8e2168be10f72c1382e3f61bf23c9532afb1a22f2389b579474fcaf8cf7571",
+    "dist/line-2/23.json": "3ba7a479d7e7e90daf4b1b271dd056fcd3f26e9a293f783d0bfdd9bbf0d9f0f7",
+    "dist/line-2/24.jpg": "250f3037666409ea49ca47427243537a83defa24316c28c9fdcf770071e02079",
+    "dist/line-2/24.json": "401563cb6b63518e8488ee697172ef772c52499aaa059179206ea06aa05d5bf3",
+    "line-3/GOAL.md": "a973f56b1c5d1c38d8ed3dca764ea266eee83f29648108412aa92db43e1462da",
+    "line-3/IMAGE-23.json": "eb127a29e04b884e3db5121f7dbe36dc2fb83ccd5801e1c12d25178e5f14999f",
+    "line-3/IMAGE-24.json": "34445485c640033cc885c83b69bc5479b284948a1fb2b73ed006359922a86dc5",
+    "line-3/IMAGE_PROMPT.md": "14296ad028e00f11e0ce266f32cf234da1ae0d683521c90016202bc42f986df5",
+    "line-3/MARK-22.md": "dd83e88e8510c55fa0021a09b5851947985dfda7560163125a5b2aba8dcf575f",
+    "line-3/MARK-23.md": "17eeb6d1099aa94667e8443dac9d981c4db5c3ca182950338f40de59ebbbdf93",
+    "line-3/MARK-24.md": "f389fc45f1c91b953b05942d0d94b1a78f222fc227fe018bc1002ba806b34294",
+    "line-3/README.md": "1546b258df16eb2f68137fc44c02dd551a5b4d2eb303a3f03fc518db1c1742df",
+    "line-3/REVIEW-22.json": "1bc5c685c7de3608213e436f0795c66f4a6f9ded8e837601e2fb896e2afeea26",
+    "line-3/REVIEW-23.json": "062bd30656be07aed0786af5bcbd808fc3352fdae0ef12f8638a096416759893",
+    "line-3/REVIEW-24.json": "0e8679d94510b89b795cc1d8c96f88cdb77a9e3e22975fd998cc30d2392bf8f7",
+    "line-3/REVIEW.json": "97e4d6dd65b7e2119a444be82fa5f86c50d1600650dac1b6fc3130807b60c6c3",
+    "line-3/TRIAL-23.json": "9a979c0f68204cdf68157aa25dce74b72ed2158bcd75eb71c56098c1ad156f07",
+    "line-3/TRIAL-24.json": "b734d381da0f217b48857e8addb52fc9bfca5a862842fd806f2d83ad6bdccf42",
+    "line-3/USED.md": "f65f2eaf2c440086ffa751a273416a33eb1a2bea1b52a7f9ae6c2045e82111a3",
+    "line-3/tools/corpus-freshness/README.md": "61ff92fbcff81cae08153fd789f46f953c82a6a3282a2703f1d0343282bcee8e",
+    "line-3/tools/corpus-freshness/freshness.py": "c87bb30d7f77ad352442b13d8fce2fc258ebd119300133888b28420505bab96c",
+    "line-3/tools/corpus-freshness/test_freshness.py": "ced63421cf7ac0f633ecf979483cbe703529a6f44c5e9e459057236c7eefb33b",
+    "line-3/tools/evidence-bundle/README.md": "dda597abf973febb1ea329349f2e5907acf334d9ebceb43a07ce483bb9261f1d",
+    "line-3/tools/evidence-bundle/bundle.py": "54829351394063075579c243adcc8a900195deee23e31badb55ed8e2e198994a",
+    "line-3/tools/evidence-bundle/examples/zto-bundle.json": "fac866e1133e4442d6605dfb1ccb7002de85d5ef82ce6da4f9091f5783e98dae",
+    "line-3/tools/evidence-bundle/test_bundle.py": "6955fa746b4385712cfd21629fbf87053ff1d4398b8405c7ac679081b297306a",
+    "line-3/tools/evidence-search/README.md": "d3a9ffd68108a90aa7bb33f9a8f022554dc7254d872df22f213ba1bc16fff182",
+    "line-3/tools/evidence-search/examples/docs/imd.md": "a14adad1d92e8b0dd5a819ff569978278223947382df8e5d4b15e66d897eba40",
+    "line-3/tools/evidence-search/examples/docs/pool.md": "c0550528c6de8499660048c0ee32a7770fab2015ade42e00f30070b9a434008b",
+    "line-3/tools/evidence-search/examples/docs/zto.md": "03a74a78fa9fd52080b1b21385dafb47dc07c2422ff2e6ff327cbf3d94da8009",
+    "line-3/tools/evidence-search/examples/zto-mainnet.json": "7f393ee3b12afe9f901b47415f061c289668b27cfe3701b58fdf3d3ad4815824",
+    "line-3/tools/evidence-search/search.py": "20b4f883a801980cda8f33001ed803da8ec572af2adf4335d12e5495744a287f",
+    "line-3/tools/evidence-search/test_search.py": "0652d345a1b8f35d0207e265d25ed2c03b14502853c76492835494e9e4cc06df",
+    "line-3/tools/search-receipt/README.md": "d2a5656bc9ff69147e7f8bfd2b1101ba3dd32bfa281959c28a301d2e328eaa4b",
+    "line-3/tools/search-receipt/examples/zto-receipt.json": "7088d25645c75cac6ebe0b55cb2d16609e2275dbda0a7d247578028e1264d562",
+    "line-3/tools/search-receipt/receipt.py": "aa737198a269ede5d50f58993386f82ead5abe99c662f4c48616a2f74383fd1e",
+    "line-3/tools/search-receipt/test_receipt.py": "257d73c1f1a694a0c05b57e31024a4710fcb7d29074f82e2fea367d22becc361",
+    "dist/line-3/01.jpg": "65f8810e4babf159cb4ef8eed69021403285bef2adcb95c97d180af48e5de125",
+    "dist/line-3/01.json": "8ac464803fd80fae513ea8f5bd99008df8aa530b768c3ec0252582aab8ad26d2",
+    "dist/line-3/02.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-3/03.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-3/04.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-3/05.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-3/06.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-3/07.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-3/08.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-3/09.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-3/10.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-3/11.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-3/12.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-3/13.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-3/14.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-3/15.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-3/16.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-3/17.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-3/18.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-3/19.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-3/20.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-3/21.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-3/22.jpg": "a16df3c15b7e4f58cba5939a0fe15b4f55e683a3bdd423a8fb59b84276f6ef7e",
+    "dist/line-3/22.json": "125e938b29ea74f66f6dc35800e39e8ff62807057fa75579bd0b87612bfa8e14",
+    "dist/line-3/23.jpg": "91021a87e54f1d41456779f28b889e7942462f044722aac719277d87cf5ed151",
+    "dist/line-3/23.json": "d7280541f4693114e44921ebb54fe5d3dd3dd18adde83e3addca73d1039281aa",
+    "dist/line-3/24.jpg": "902666241454296468797fa8934af78cb4d795d53c95739477108ee1f073e57f",
+    "dist/line-3/24.json": "5ea1e8807451c10f9895096d40d2c49e4c36d4646e17ee449205ff0ba9b6d801",
+    "line-4/GOAL.md": "06d3d4ef63f0e7bd23ae5344c2b096fdd6f2c36be880b75be38e4516c57b99bf",
+    "line-4/IMAGE-22.json": "7dc27604eed33f031ee8b16f85c3dd192564f9becf975113ad6c85f9acf2cc6f",
+    "line-4/IMAGE_PROMPT.md": "f0cb7706109da769a1c420a56897a116a7e1641e9bd10101bfa5b4c0a4271e8f",
+    "line-4/README.md": "c28652dfc14c8f1909502c044845e34d670b8638a449516ca6d297245bb64d11",
+    "line-4/REVIEW-22.json": "480f399c30156e359e9d30e0e3e49a9da158ca659548561f3c5737ca2a4fa352",
+    "line-4/REVIEW.json": "a1626e66b43527f5838e36364e1cfc298aee8d13fcc635a40736c6e3102748eb",
+    "line-4/TRIAL-22.json": "852186128ed0bd0ec844198b2d49c703265bc55a626c3010dc50eb93780005d1",
+    "line-4/USED.md": "9d0c18adc0649e59bce2011bd357cf8b972387c96bd16631950a27f0a7190877",
+    "line-4/finish_wall22.py": "e90bf5653f93fe02cf20421250cabf65b4a78664994ce3a3591875fe484cdac3",
+    "line-4/tools/conflict-core/README.md": "188cdb359813bee6e6b43195f6567eda2390aa281492bd8db88c95154b245acc",
+    "line-4/tools/conflict-core/core.py": "4f06490e70116511cf5b8bcc045fe00e8b27e7264eb8a13935315ac6d245af0e",
+    "line-4/tools/conflict-core/examples/requests-conflict.json": "d335589e45e709226868373c26e9386251903b2ac86d6757dd18683abaab823c",
+    "line-4/tools/conflict-core/examples/sources.json": "6170f0d7431c5fa37c2de8dbd45ed3fd8bc1645b8ab55557794418b1a630ec61",
+    "line-4/tools/conflict-core/test_core.py": "dde3430af54f95cc498776b2669f7ce2bf431c21d3cd6fa2bea99e028749c170",
+    "line-4/tools/offline-resolver/README.md": "495b457212cf9ac772d96b45441619c2b79dc86cbbd87a43e3f57225ccec184f",
+    "line-4/tools/offline-resolver/build_example.py": "056ea5790a9fc5a9cbf288289eb4ba3d60fb413da8c2d6ba6b7ac0a0890e0c3a",
+    "line-4/tools/offline-resolver/examples/requests.json": "bf8ab6d924509a7ad0aeb45bf934bb6fb30eea159f895a6fa7b3d4dd3834a274",
+    "line-4/tools/offline-resolver/examples/sources.json": "00b932d1de817c46637a833614b3cf3d22849cc1021ce19240df5344fb0fe374",
+    "line-4/tools/offline-resolver/resolve.py": "204176243974c16f7ba81350d2eefc782ba5a8e2537b8aeee64066af7b11796f",
+    "line-4/tools/offline-resolver/test_resolve.py": "b8ba3aed8ffa04427080b4cb0fced2135c7c4353eba0cbc8314138219fd360c1",
+    "dist/line-4/01.jpg": "c039b4b9d127cf2bc0ca17cfa8d01b269c85b1626e6feb756cdee536f813a59c",
+    "dist/line-4/01.json": "dd49ce259047b9d0cad5049b01b69d977c1b9af7df9cc16ecbd364fe471a51c5",
+    "dist/line-4/02.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-4/03.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-4/04.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-4/05.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-4/06.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-4/07.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-4/08.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-4/09.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-4/10.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-4/11.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-4/12.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-4/13.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-4/14.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-4/15.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-4/16.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-4/17.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-4/18.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-4/19.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-4/20.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-4/21.json": "db0e739c4538bdacd1933ca08d18a7e1df3f686c37792fa62e6692757745de54",
+    "dist/line-4/22.jpg": "eed0cdcb688727bc0e240bf67623e8db9b2cf859557ddcbc4c9e41d92276bd55",
+    "dist/line-4/22.json": "2b512a89bdf6133aba6e2e158056fb8f3a6922745ac2f0b51cdebd363fe087b1"
+  },
+  "total_tests": 220
+}
