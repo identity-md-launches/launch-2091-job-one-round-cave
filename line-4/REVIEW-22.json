@@ -18,7 +18,7 @@
     "older_records_unchanged": "passed"
   },
   "wall": {
-    "path": "artifacts/line-4/wall-v3.png",
+    "path": "artifacts/line-4/wall-v4.png",
     "continuation_path": "artifacts/line-4/wall.png",
     "format": "PNG",
     "mode": "RGB",
@@ -67,5 +67,15 @@
     "Examples omit interpreter/platform constraints and extras. No security or installability claim.",
     "A budget-limited reduction or audit may remain inconclusive."
   ],
-  "output_delivery": "wall-v3.png is an untracked required output; no generated output was force-added to Git."
+  "output_delivery": "wall-v4.png is the required output, copied byte-for-byte from the completed continuation wall; no generated output was force-added to Git.",
+  "repair_checks": {
+    "png_crc_and_decompression": "passed",
+    "required_export_equals_continuation": true,
+    "record_hash_matches_required_export": true,
+    "required_export_dimensions": [
+      1254,
+      1254
+    ],
+    "required_export_format": "PNG"
+  }
 }
